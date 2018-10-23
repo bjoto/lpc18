@@ -1,5 +1,9 @@
+\pdfoutput=1
+\pdfminorversion=7
+
 \documentclass{beamer}
-\usetheme{metropolis}           % Use metropolis theme
+
+\usetheme{metropolis}
 
 % Intel palette
 \definecolor{DarkBlue}{HTML}{003C71}
@@ -8,20 +12,106 @@
 \definecolor{Gray}{HTML}{B1BABF}
 \definecolor{Orange}{HTML}{FFA300}
 \definecolor{Red}{HTML}{FC4C02}
-% Theme colors are derived from these two elements
+\definecolor{White}{HTML}{FFFFFF}
 \setbeamercolor{alerted text}{fg=Blue}
-
-% ... however you can of course override styles of all elements
 \setbeamercolor{frametitle}{bg=Blue}
 
-\title{A minimal example}
+\setbeamercolor{palette primary}{fg=White, bg=Blue}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\title{The Path to DPDK Speeds for AF\_XDP}
 \date{\today}
-\author{Matthias Vogelgesang}
-\institute{Centre for Modern Beamer Themes}
+\author{magnus.karlsson@intel.com, bjorn.topel@intel.com}
+\institute{LPC 2018}
+\titlegraphic{\hfill\includegraphics[width=2cm]{intel-logo.pdf}} 
+
 \begin{document}
   \maketitle
-  \section{First Section}
-  \begin{frame}{First Frame}
-    Hello, world!
+
+  \begin{frame}{XDP 101}
+    \resizebox{\textwidth}{!}{\input{xdp.pdf_t}}
   \end{frame}
+  \begin{frame}{AF\_XDP 101}
+    \begin{itemize}
+    \item Ingress
+      \begin{itemize}
+      \item userspace XDP packet sink
+      \item {\tt XDP\_REDIRECT} to socket via {\tt XSKMAP}
+      \end{itemize}
+    \item Egress
+      \begin{itemize}
+      \item no XDP program
+      \end{itemize}
+    \item Register userspace memory to kernel (UMEM)
+    \item Pass packet buffer ownership via rings with descriptors
+    \item Fill ring (to kernel) / Rx ring (from kernel)
+    \item Tx ring (to kernel) / Completion ring (from kernel)
+    \item copy mode (DMA to/from kernel allocated frames, copy data to user)
+    \item zero-copy mode (DMA to/from user allocated frames)
+    \end{itemize}
+  \end{frame}
+  \begin{frame}{AF\_XDP 101}
+    \resizebox{\textwidth}{!}{\input{queues_and_umem.pdf_t}}
+  \end{frame}
+
+  \begin{frame}{Busy poll() vs run-to-completion}
+    \resizebox{\textwidth}{!}{\input{two_vs_one_core.pdf_t}}
+  \end{frame}
+  \begin{frame}{Tx in-order completion}
+    \resizebox{\textwidth}{!}{\input{in_order.pdf_t}}
+  \end{frame}
+  \begin{frame}{rxdrop results}
+    \resizebox{\textwidth}{!}{\includegraphics{results_rx.pdf}}
+  \end{frame}
+  \begin{frame}{txpush results}
+    \resizebox{\textwidth}{!}{\includegraphics{results_tx.pdf}}
+  \end{frame}
+  \begin{frame}{Run-to-completion vs busy poll()}
+    \resizebox{\textwidth}{!}{\includegraphics{results_poll.pdf}}
+  \end{frame}
+  \begin{frame}{AF\_XDP vs DPDK}
+    \resizebox{\textwidth}{!}{\includegraphics{results_dpdk.pdf}}
+  \end{frame}
+  \begin{frame}{Math}
+    \begin{equation*}
+      e = \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^n
+    \end{equation*}
+  \end{frame}
+
+  \begin{frame}{Thanks!}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+    \begin{itemize}
+    \item Ilias Apalodimas
+    \item Daniel Borkmann
+    \item Jesper Dangaard Brouer
+    \item Willem De Bruijn
+    \item Eric Dumazet
+    \item Alexander Duyck
+    \item Mykyta Iziumtsev
+    \item Jakub Kicinski
+    \item Song Liu
+    \end{itemize}
+    
+    \column{0.5\textwidth}
+    \begin{itemize}
+    \item David S. Miller
+    \item Sridhar Samudrala
+    \item Yonghong Song
+    \item Alexei Starovoitov
+    \item William Tu
+    \item Anil Vasudevan
+    \item Jingjng Wu
+    \item Qi Zhang
+    \end{itemize}
+  \end{columns}
+  \end{frame}
+
+  \begin{frame}[standout]
+    Questions?
+    \resizebox{\textwidth}{!}{\includegraphics{af_xdp_vit.pdf}}
+  \end{frame}
+
 \end{document}
