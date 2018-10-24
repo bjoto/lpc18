@@ -50,7 +50,7 @@ this even further. The focus of this paper is the performance
 optimizations we need to make in AF\_XDP to get it to perform as fast
 as DPDK.
 
-We present various optimization that fall into two broad categories:
+We present various optimizations that fall into two broad categories:
 ones that are seamless to the application and ones that requires
 additions to the uapi.
 
@@ -69,7 +69,7 @@ pass network traffic from the driver in the kernel up to user space as
 fast and efficiently as possible, but still abiding by all the usual
 robustness, isolation and security properties that Linux provides. The
 performance target of AF\_XDP has always been to be close to that of
-software packages with user space drivers (full or partial) and or
+software packages with user space drivers (full or partial) and/or
 zero-copy semantics such as DPDK~\cite{dpdk}, Netmap~\cite{netmap},
 and PF\_RING~\cite{pfring}. The initial release of AF\_XDP in 4.18
 targeted basic functionality and was not optimized for
@@ -81,14 +81,13 @@ above can deliver. And this is not enough.
 
 In this paper, we present a number of optimization to AF\_XDP that
 takes the performance up to levels that are closer to or even on par
-with what
-user-space driver techniques, such as DPDK, can deliver. With these
-optimizations, we more than double the throughput performance: from 15
-Mpps to 39 Mpps for Rx and from 25 Mpps to 68 Mpps for Tx. We have
-limited the optimization proposals to patch sets that we believe are
-acceptable to the networking community and non-intrusive to other
-component with the exception of XDP~\cite{xdp} in some cases, as
-AF\_XDP uses XDP for its Rx data path.
+with what user-space driver techniques, such as DPDK, can
+deliver. With these optimizations, more than double the throughput
+performance: from 15 Mpps to 39 Mpps for Rx and from 25 Mpps to 68
+Mpps for Tx. We have limited the optimization proposals to patch sets
+that we believe are acceptable to the networking community and
+non-intrusive to other component with the exception of XDP~\cite{xdp}
+in some cases, as AF\_XDP uses XDP for its Rx data path.
 
 To improve the performance of the Rx path, we propose three sets of
 improvements:
@@ -101,20 +100,20 @@ improvements:
   optimizes indirect calls and switch statements in the data path so
   that they perform better with retpolines.
 
-\item Introduce a new {\tt bind} option in which the user does not have to
-  supply an XDP program and all traffic on the specified queue id is
-  sent up to the socket. This is realized in AF\_XDP by loading a
-  built-in XDP program and this program and the path leading up to it
-  can be optimized leading to substantial performance
+\item Introduce a new {\tt bind} option in which the user does not
+  have to supply an XDP program and all traffic on the specified queue
+  id is sent up to the socket. This is realized in AF\_XDP by loading
+  a built-in XDP program and this program and the path leading up to
+  it can be optimized leading to substantial performance
   improvements. Another benefit with this is that it improves ease of
   use and adoption of AF\_XDP as an external XDP program is no longer
   required the configuration path becomes simpler.
 
 \item Introduce an execution context in the XDP code instead of using
   per-cpu state. While this improves performance on its own, more
-  importantly, it becomes possible to implement a number of
-  other performance improvements based on having information more
-  readily available.
+  importantly, it becomes possible to implement a number of other
+  performance improvements based on having information more readily
+  available.
 
 \end{itemize}
 
@@ -523,7 +522,7 @@ processing in different NAPI contexts, then they can execute on
 different cores for a total of three cores. But this is not the case
 for the driver we are using in our experimental evaluation. This is in
 contrast with DPDK and other user-mode driver packages which can, with
-good performance, execute both Rx/tx processing and the application on
+good performance, execute both Rx/Tx processing and the application on
 a single core. If we did this, the performance would drop by orders of
 magnitude due to context switching. But there is a solution for this
 in Linux and that is to use the \emph{busy poll()} support ({\tt
@@ -974,9 +973,9 @@ lowered maintainability and flexibility of such drivers.
 It would be beneficial to add hugepage support to AF\_XDP, not only
 because it will cut down the TLB miss rate, but more so because it can
 cut down the communication rate on the fill ring. In the fill ring we
-indicate which page buffers should be returned by indicating what chunk
-it belongs to. In the current implementation the chunk size can be 2K
-or 4K, but with huge pages this could be for example 64K. So
+indicate which page buffers should be returned by indicating what
+chunk it belongs to. In the current implementation the chunk size can
+be 2K or 4K, but with huge pages this could be for example 64K. So
 indicating the ownership transfer of 32 consecutive 2K page buffers to
 the kernel can be accomplished with just one write to the fill ring
 when the chunk size is 64K, instead of 32 writes with a chunk size of
@@ -986,20 +985,20 @@ Another avenue worth pursuing is to optimize the driver for ``XDP
 first''. Currently we use the standard skb path, but there are many
 things in that path that cannot happen because they are not supported
 in XDP or AF\_XDP. We could, for example, register a special NAPI
-handler that only deals with XDP Rx and/or Tx rings and provide a
-slim and highly optimized path from there. Another example would be to
-go to 16-byte descriptors for those queues as these can be handled
-faster by the I40E NIC and also consumes less memory which could lead
-to better performance.
+handler that only deals with XDP Rx and/or Tx rings and provide a slim
+and highly optimized path from there. Another example would be to go
+to 16-byte descriptors for those queues as these can be handled faster
+by the I40E NIC and also consumes less memory which could lead to
+better performance.
 
 One idea that we had for this paper, but had no time to implement, was
 to batch the XDP processing so that a batch of packets is first
 received, then that batch is processed in the XDP program and their
 corresponding actions recorded, then after this the actions are
 performed as a batch. When we implemented AF\_PACKET V4, we
-experimented with this and it provided better throughput as it used the
-instruction cache more efficiently. But we have not had the time to
-implement this in the latest Linux kernel with AF\_XDP. Jesper
+experimented with this and it provided better throughput as it used
+the instruction cache more efficiently. But we have not had the time
+to implement this in the latest Linux kernel with AF\_XDP. Jesper
 Dangaard Brouer has also posted interesting
 suggestions~\cite{jesper_batching} on how to batch more in XDP.
 
@@ -1024,14 +1023,14 @@ current baseline in bpf-next and net-next is improved by 160\% from
 15.1 Mpps to 39.3 Mpps for Rx and by 169\% or from 25.3 Mpps to 68.0
 Mpps for Tx. We also evaluate the support of the busy poll() feature
 in conjunction with AF\_XDP and while it reduces the total performance
-by between 20\% and 25\%, it also cuts down the number of used cores to
-one. Measured on a per core basis, busy poll() actually increases
+by between 20\% and 25\%, it also cuts down the number of used cores
+to one. Measured on a per core basis, busy poll() actually increases
 performance with another 50\% compared to the optimized Rx and Tx
 results. We also compare AF\_XDP against DPDK and while there is still
 substantial work required on the Rx side to reach the same performance
-levels, Tx and an application that actually touches the data,
-l2fwd, offers comparable performance to DPDK when we run in
-run-to-completion mode.
+levels, Tx and an application that actually touches the data, l2fwd,
+offers comparable performance to DPDK when we run in run-to-completion
+mode.
 
 
 \section{Acknowledgments}
@@ -1041,9 +1040,9 @@ We would really like to thank the reviewers on the mailing list and
 all the people that have taken AF\_XDP for a spin and reported issues,
 bugs and improvement suggestions: Ilias Apalodimas, Daniel Borkmann,
 Jesper Dangaard Brouer, Willem De Bruijn, Eric Dumazet, Alexander
-Duyck, Mykyta Iziumtsev, Jakub Kicinski, Song Liu, Sridhar Samudrala,
-Yonghong Song, Alexei Starovoitov, William Tu, Anil Vasudevan, Jingjng
-Wu, and Qi Zhang. We owe you one.
+Duyck, Mykyta Iziumtsev, Jakub Kicinski, Song Liu, David S. Miller,
+Sridhar Samudrala, Yonghong Song, Alexei Starovoitov, William Tu, Anil
+Vasudevan, Jingjing Wu, and Qi Zhang. We owe you one.
 
 \bibliographystyle{abbrvnat}
 \bibliography{bibliography}
