@@ -56,28 +56,96 @@
     \resizebox{\textwidth}{!}{\input{queues_and_umem.pdf_t}}
   \end{frame}
 
+  \begin{frame}{Baseline and blueprint}
+      \begin{itemize}
+      \item Baseline: 64B @ \textasciitilde15-22 Mpps
+      \item Blueprint
+      \begin{itemize}
+        \item do less (instructions)
+        \item talk less (coherency traffic)
+        \item do more at the same time (batching, i\$)
+        \item Land of Spectres: fewer retpolines, fewer retpolines,
+          fewer repolines
+      \end{itemize}
+
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Ingress}
+      \begin{itemize}
+        \item {\tt XDP\_ATTACH} and {\tt bpf\_xsk\_redirect}, attach
+          at-most one socket per netdev queue, load built-in XDP
+          program, 2-level hierarchy
+        \item remove indirect call, {\tt bpf\_prog\_run\_xdp}
+        \item remove indirect call, XDP actions switch-statement ($>=5
+          \implies$ jump table)
+        \item driver optimizations (batching, code restructure)
+        \item {\tt bpf\_prog\_run\_xdp}, {\tt xdp\_do\_redirect} and
+          {\tt xdp\_do\_flush\_map}: per-CPU {\tt struct
+            bpf\_redirect\_info} + {\tt struct xdp\_buff} + {\tt
+            struct xdp\_rxq\_info} vs explicit, stack-based context
+      \end{itemize}
+  \end{frame}
+  \begin{frame}{Ingress, results, data not touched}
+    \resizebox{\textwidth}{!}{\includegraphics{results_rx.pdf}}
+  \end{frame}
+
+  \begin{frame}{Egress}
+    \begin{itemize}
+    \item Tx performance capped per HW queue $\implies$ multiple Tx
+      sockets per UMEM
+    \item Larger/more batching, larger descriptor rings
+    \item Dedicated AF\_XDP Tx queues
+    \item In-order complettion, {\tt setsockopt} {\tt XDP\_INORDER\_COMPLETION}
+    \end{itemize}
+  \end{frame}
+  \begin{frame}{Egress, in-order completion}
+    \resizebox{\textwidth}{!}{\input{in_order.pdf_t}}
+  \end{frame}
+  \begin{frame}{Egress, results, data not touched}
+    \resizebox{\textwidth}{!}{\includegraphics{results_tx.pdf}}
+  \end{frame}
+
   \begin{frame}{Busy poll() vs run-to-completion}
     \resizebox{\textwidth}{!}{\input{two_vs_one_core.pdf_t}}
   \end{frame}
-  \begin{frame}{Tx in-order completion}
-    \resizebox{\textwidth}{!}{\input{in_order.pdf_t}}
-  \end{frame}
-  \begin{frame}{rxdrop results}
-    \resizebox{\textwidth}{!}{\includegraphics{results_rx.pdf}}
-  \end{frame}
-  \begin{frame}{txpush results}
-    \resizebox{\textwidth}{!}{\includegraphics{results_tx.pdf}}
-  \end{frame}
-  \begin{frame}{Run-to-completion vs busy poll()}
+  \begin{frame}{Busy poll() vs run-to-completion, results}
     \resizebox{\textwidth}{!}{\includegraphics{results_poll.pdf}}
   \end{frame}
-  \begin{frame}{AF\_XDP vs DPDK}
+
+  \begin{frame}{Comparison with DPDK}
+    \begin{itemize}
+      \item Userspace, vectorized drivers
+      \item ``Learning from the DPDK''
+        \url{http://vger.kernel.org/netconf2018_files/StephenHemminger_netconf2018.pdf}
+    \end{itemize}
+  \end{frame}
+  \begin{frame}{Comparison with DPDK, results}
     \resizebox{\textwidth}{!}{\includegraphics{results_dpdk.pdf}}
   \end{frame}
-  \begin{frame}{Math}
-    \begin{equation*}
-      e = \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^n
-    \end{equation*}
+
+  \begin{frame}{Next steps}
+    Upstream!
+    \begin{itemize}
+      \item XDP: switch-statement
+      \item Rx/Tx: drivers
+      \item Rx: {\tt XDP\_ATTTACH} and {\tt bpf\_xsk\_redirect}
+      \item Tx: multiple Tx sockets per UMEM
+      \item General leftovers still to-be-upstreamed: libbpf AF\_XDP
+        support (easier to consume), selftest
+    \end{itemize}    
+  \end{frame}
+
+  \begin{frame}{Future work}
+    \begin{itemize}
+    \item hugepage support, less fill ring traffic ({\tt
+      get\_user\_pages})
+    \item fd.io/VPP work vectors (i\$, explicit batching in function calls)
+    \item ``XDP first'' drivers 
+    \item collaborate/share code with RDMA (e.g. {\tt
+      get\_user\_pages})
+    \item Type-writer model (currently not planned)
+    \end{itemize}
   \end{frame}
 
   \begin{frame}{Thanks!}
@@ -103,7 +171,7 @@
     \item Alexei Starovoitov
     \item William Tu
     \item Anil Vasudevan
-    \item Jingjng Wu
+    \item Jingjing Wu
     \item Qi Zhang
     \end{itemize}
   \end{columns}
