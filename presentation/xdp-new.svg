@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.7a -->
+
+<!-- CreationDate: 2018-10-24 20:51:44 -->
+
+<!-- Magnification: 1.05 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="382pt"
+   height="265pt"
+   viewBox="168 -5862 6054 4196"
+   version="1.1"
+   id="svg900"
+   sodipodi:docname="xdp-new.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata906">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs904">
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1331"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1329"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1327"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path1325"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1323"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path1321"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1319"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path1317"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1313"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1311"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1309"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path1307"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1305"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path1303"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1301"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path1299"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1297"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1295"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1293"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1291"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1289"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1287"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1285"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path1283"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1281"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path1279"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1277"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path1275"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1273"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path1271"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker1269"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1267"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1001"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path1004"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <defs
+       id="defs822">
+      <clipPath
+         id="cp0">
+        <path
+           style="clip-rule:evenodd"
+           inkscape:connector-curvature="0"
+           id="path819"
+           d="m 168,-5862 h 6054 v 4196 H 168 Z m 4797,911 h 60 l -4,-339 h -51 z" />
+      </clipPath>
+    </defs>
+    <defs
+       id="defs833">
+      <clipPath
+         id="cp1">
+        <path
+           style="clip-rule:evenodd"
+           inkscape:connector-curvature="0"
+           id="path830"
+           d="m 168,-5862 h 6054 v 4196 H 168 Z m 4797,2441 h 60 l -4,-339 h -51 z" />
+      </clipPath>
+    </defs>
+    <defs
+       id="defs842">
+      <clipPath
+         id="cp2">
+        <path
+           style="clip-rule:evenodd"
+           inkscape:connector-curvature="0"
+           id="path839"
+           d="m 168,-5862 h 6054 v 4196 H 168 Z m 4842,3746 h 60 l -4,-339 h -51 z" />
+      </clipPath>
+    </defs>
+    <defs
+       id="defs857">
+      <clipPath
+         id="cp3">
+        <path
+           style="clip-rule:evenodd"
+           inkscape:connector-curvature="0"
+           id="path854"
+           d="m 168,-5862 h 6054 v 4196 H 168 Z m 1827,956 h 60 l -4,-339 h -51 z" />
+      </clipPath>
+    </defs>
+    <defs
+       id="defs868">
+      <clipPath
+         id="cp4">
+        <path
+           style="clip-rule:evenodd"
+           inkscape:connector-curvature="0"
+           id="path865"
+           d="m 168,-5862 h 6054 v 4196 H 168 Z m 2891,2157 v -60 l -339,5 v 51 z" />
+      </clipPath>
+    </defs>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     id="namedview902"
+     showgrid="true"
+     inkscape:zoom="2.3660377"
+     inkscape:cx="254.66667"
+     inkscape:cy="176.66667"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg900">
+    <inkscape:grid
+       type="xygrid"
+       id="grid908" />
+  </sodipodi:namedview>
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:11.88612542;stroke-miterlimit:4;stroke-dasharray:none"
+     id="rect815"
+     height="832.02869"
+     width="2912.1006"
+     y="-4219.6348"
+     x="3020.6702" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:11.88612542;stroke-miterlimit:4;stroke-dasharray:none"
+     id="rect817"
+     height="356.58377"
+     width="1634.4307"
+     y="-3981.9124"
+     x="4060.6177" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:11.88612542;stroke-miterlimit:4;stroke-dasharray:none"
+     id="rect828"
+     height="428.11945"
+     width="2319.5264"
+     y="-2733.8928"
+     x="3850.967" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:11.88612542;stroke-miterlimit:4;stroke-dasharray:none"
+     id="rect850"
+     height="1309.9302"
+     width="6002.6123"
+     y="-4457.417"
+     x="167.94037" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:11.88612542;stroke-miterlimit:4;stroke-dasharray:none"
+     id="rect852"
+     height="832.02869"
+     width="1664.0576"
+     y="-4219.6348"
+     x="1059.4594" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:11.88612542;stroke-miterlimit:4;stroke-dasharray:none"
+     id="rect863"
+     rx="105.39031"
+     height="639.70184"
+     width="2258.3638"
+     y="-5764.8311"
+     x="3912.1294" />
+  <text
+     style="font-style:normal;font-weight:500;font-size:192.0005423px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text874"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3740.0684"
+     x="4686.0908"
+     xml:space="preserve">XDP</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:192.0005423px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text876"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-5400.2441"
+     x="4588.3115"
+     xml:space="preserve">Application</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:192.00054932px;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     id="text878"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-4645.5845"
+     x="5040.4468"
+     xml:space="preserve">AF_XDP</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:192.0005423px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text880"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-1805.7736"
+     x="5200.9907"
+     xml:space="preserve">Packets</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:192.0005423px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text884"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3985.8682"
+     x="466.58182"
+     xml:space="preserve">Linux</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:192.0005423px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text886"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3981.2703"
+     x="1314.8558"
+     xml:space="preserve">Network</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:192.0005423px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text888"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3981.0574"
+     x="3270.8015"
+     xml:space="preserve">Driver</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:192.00054932px;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     id="text890"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-4881.0571"
+     x="1779.0757"
+     xml:space="preserve">AF_INET</text>
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:192.00054932px;font-family:'CMU Sans Serif';-inkscape-font-specification:'CMU Sans Serif, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#000000"
+     id="text892"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-4626.3408"
+     x="1774.052"
+     xml:space="preserve">AF_PACKET</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:192.0005423px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text894"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3807.3577"
+     x="1304.8086"
+     xml:space="preserve">Stack</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:192.0005423px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text896"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-2455.6091"
+     x="4490.1299"
+     xml:space="preserve">Network card</text>
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:11.88612542;stroke-miterlimit:4;stroke-dasharray:none"
+     id="rect863-8"
+     rx="105.39031"
+     height="639.7019"
+     width="2258.3638"
+     y="-5764.8311"
+     x="465.15332" />
+  <text
+     style="font-style:normal;font-weight:500;font-size:192.0005423px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;stroke-width:1;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text876-7"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-5400.2441"
+     x="1141.3354"
+     xml:space="preserve">Application</text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:11.88612461px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker1269)"
+     d="m 1594.335,-5111.0943 c 0,891.4594 0,891.4594 0,891.4594 v 0"
+     id="path991"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:11.88612461px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker1289)"
+     d="m 4863.0194,-5111.0943 v 1129.1819"
+     id="path995"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:11.88612461px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;marker-start:url(#marker1313)"
+     d="m 4863.0194,-3625.3287 v 891.4594"
+     id="path997"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:11.88612461px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker1301)"
+     d="m 3020.67,-3803.6206 c -297.1531,0 -297.1531,0 -297.1531,0"
+     id="path999"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:11.88612461px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker1331)"
+     d="m 4863.0194,-2317.8549 v 594.3062"
+     id="path1315"
+     inkscape:connector-curvature="0" />
+</svg>

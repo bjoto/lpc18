@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.7a -->
+
+<!-- CreationDate: 2018-10-24 21:29:53 -->
+
+<!-- Magnification: 1.05 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1136pt"
+   height="222pt"
+   viewBox="660 -5097 18027 3521"
+   version="1.1"
+   id="svg1742"
+   sodipodi:docname="queues_and_umem-new.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata1748">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1746">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path1004"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <defs
+       id="defs1651">
+      <clipPath
+         id="cp0">
+        <path
+           id="path1648"
+           d="M 660,-5097 H 18687 V -1576 H 660 z   M 7082,-4398 7030,-4367 7198,-4131 7209,-4138z"
+           clip-rule="evenodd" />
+      </clipPath>
+    </defs>
+    <defs
+       id="defs1660">
+      <clipPath
+         id="cp1">
+        <path
+           id="path1657"
+           d="M 660,-5097 H 18687 V -1576 H 660 z   M 6597,-3434 6550,-3396 6749,-3186 6759,-3194z"
+           clip-rule="evenodd" />
+      </clipPath>
+    </defs>
+    <defs
+       id="defs1669">
+      <clipPath
+         id="cp2">
+        <path
+           id="path1666"
+           d="M 660,-5097 H 18687 V -1576 H 660 z   M 9639,-3254 9675,-3302 9404,-3474 9396,-3464z"
+           clip-rule="evenodd" />
+      </clipPath>
+    </defs>
+    <defs
+       id="defs1678">
+      <clipPath
+         id="cp3">
+        <path
+           id="path1675"
+           d="M 660,-5097 H 18687 V -1576 H 660 z   M 9267,-1936 9305,-1982 9044,-2170 9035,-2159z"
+           clip-rule="evenodd" />
+      </clipPath>
+    </defs>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     id="namedview1744"
+     showgrid="false"
+     inkscape:zoom="0.90514965"
+     inkscape:cx="757.33333"
+     inkscape:cy="148"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1742" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1584"
+     points=" 2475,-4275 2475,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1586"
+     points=" 2925,-4275 2925,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1588"
+     points=" 3375,-4275 3375,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1590"
+     points=" 3825,-4275 3825,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1592"
+     points=" 4275,-4275 4275,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1594"
+     points=" 4725,-4275 4725,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1596"
+     points=" 5175,-4275 5175,-3600" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="rect1598"
+     height="675"
+     width="3600"
+     y="-4275"
+     x="2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1600"
+     points=" 2475,-2925 2475,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1602"
+     points=" 2925,-2925 2925,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1604"
+     points=" 3375,-2925 3375,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1606"
+     points=" 3825,-2925 3825,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1608"
+     points=" 4275,-2925 4275,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1610"
+     points=" 4725,-2925 4725,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1612"
+     points=" 5175,-2925 5175,-2250" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="rect1614"
+     height="675"
+     width="3600"
+     y="-2925"
+     x="2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1616"
+     points=" 12375,-4275 12375,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1618"
+     points=" 12825,-4275 12825,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1620"
+     points=" 13275,-4275 13275,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1622"
+     points=" 13725,-4275 13725,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1624"
+     points=" 14175,-4275 14175,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1626"
+     points=" 14625,-4275 14625,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1628"
+     points=" 15075,-4275 15075,-3600" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="rect1630"
+     height="675"
+     width="3600"
+     y="-4275"
+     x="11925" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1632"
+     points=" 12375,-2925 12375,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1634"
+     points=" 12825,-2925 12825,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1636"
+     points=" 13275,-2925 13275,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1638"
+     points=" 13725,-2925 13725,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1640"
+     points=" 14175,-2925 14175,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1642"
+     points=" 14625,-2925 14625,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1644"
+     points=" 15075,-2925 15075,-2250" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="rect1646"
+     height="675"
+     width="3600"
+     y="-2925"
+     x="11925" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     inkscape:connector-curvature="0"
+     id="path1653"
+     clip-path="url(#cp0)"
+     d="m 4950,-4185 a 1247,1247 0 0 1 2250,45" />
+  <polygon
+     style="fill:#000000;stroke:#000000;stroke-width:75px;stroke-miterlimit:8"
+     id="polygon1655"
+     stroke-miterlimit="8"
+     points="7082,-4398 7030,-4367 7117,-4279 " />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     inkscape:connector-curvature="0"
+     id="path1662"
+     clip-path="url(#cp1)"
+     d="m 5490,-2790 a 671,671 0 0 1 1260,-405" />
+  <polygon
+     style="fill:#000000;stroke:#000000;stroke-width:75px;stroke-miterlimit:8"
+     id="polygon1664"
+     stroke-miterlimit="8"
+     points="6597,-3434 6550,-3396 6649,-3321 " />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     inkscape:connector-curvature="0"
+     id="path1671"
+     clip-path="url(#cp2)"
+     d="m 12240,-3915 a 1869,1869 0 0 1 -2835,450" />
+  <polygon
+     style="fill:#000000;stroke:#000000;stroke-width:90px;stroke-miterlimit:8"
+     id="polygon1673"
+     stroke-miterlimit="8"
+     points="9639,-3254 9675,-3302 9561,-3349 " />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     inkscape:connector-curvature="0"
+     id="path1680"
+     clip-path="url(#cp3)"
+     d="m 12150,-2475 a 2041,2041 0 0 1 -3105,315" />
+  <polygon
+     style="fill:#000000;stroke:#000000;stroke-width:90px;stroke-miterlimit:8"
+     id="polygon1682"
+     stroke-miterlimit="8"
+     points="9267,-1936 9305,-1982 9194,-2035 " />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1684"
+     points=" 7650,-3825 11025,-3825" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1686"
+     points=" 6525,-3825 11025,-3825" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1688"
+     points=" 6525,-3375 11025,-3375" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1690"
+     points=" 6525,-2475 11025,-2475" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1692"
+     points=" 7875,-4275 7875,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1694"
+     points=" 8325,-4275 8325,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1696"
+     points=" 8775,-4275 8775,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1698"
+     points=" 9225,-4275 9225,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1700"
+     points=" 9675,-4275 9675,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1702"
+     points=" 10125,-4275 10125,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1704"
+     points=" 10575,-4275 10575,-2025" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="rect1706"
+     height="2250"
+     width="4500"
+     y="-4275"
+     x="6525" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1708"
+     points=" 7425,-4275 7425,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1710"
+     points=" 6975,-4275 6975,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:11.90162884;stroke-miterlimit:4;stroke-dasharray:none"
+     id="polyline1712"
+     points=" 6525,-2925 11025,-2925" />
+  <rect
+     style="fill:none;stroke:#ffffff;stroke-width:8px"
+     id="rect1714"
+     height="45"
+     width="90"
+     y="-5085"
+     x="2115" />
+  <rect
+     style="fill:none;stroke:#ffffff;stroke-width:8px"
+     id="rect1716"
+     height="45"
+     width="90"
+     y="-2610"
+     x="18585" />
+  <text
+     style="font-style:normal;font-weight:500;font-size:191.9970761px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text1718"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-4545"
+     x="7065"
+     xml:space="preserve">UMEM consisting of equally sized packet buffers</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:191.9970761px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text1720"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3375"
+     x="2790"
+     xml:space="preserve">Packets received</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:191.9970761px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text1722"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-1935"
+     x="2655"
+     xml:space="preserve">Packets to transmit</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:191.9970761px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text1724"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3375"
+     x="12330"
+     xml:space="preserve">Give empty packet buffer to kernel</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:191.9970761px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text1726"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-1935"
+     x="12015"
+     xml:space="preserve">Tx has completed. Packet buffer belongs to application</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:191.9970761px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text1728"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3825"
+     x="15795"
+     xml:space="preserve">Fill Ring (FR)</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:191.9970761px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text1730"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-2520"
+     x="15795"
+     xml:space="preserve">Completion Ring (CR)</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:191.9970761px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text1732"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-4770"
+     x="12735"
+     xml:space="preserve">One FR/CR pair per umem</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:191.9970761px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text1734"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-4770"
+     x="2340"
+     xml:space="preserve">One Rx/Tx ring pair per socket</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:191.9970761px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text1736"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3915"
+     x="675"
+     xml:space="preserve">RX Ring</text>
+  <text
+     style="font-style:normal;font-weight:500;font-size:191.9970761px;font-family:'CMU Sans Serif';text-anchor:start;fill:#000000;-inkscape-font-specification:'CMU Sans Serif, Medium';font-stretch:normal;font-variant:normal;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+     id="text1738"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-2475"
+     x="720"
+     xml:space="preserve">TX Ring</text>
+</svg>
