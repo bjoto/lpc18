@@ -39,21 +39,21 @@
 \maketitle
 
 \begin{abstract}
-AF\_XDP is a new socket type for raw frames introduced in 4.18. The
-current code base offers throughput numbers north of 20 Mpps per
-application core for 64-byte packets on our system, however there are
-a lot of optimizations that could be performed in order to increase
-this even further. The focus of this paper is the performance
-optimizations we need to make in AF\_XDP to get it to perform as fast
-as DPDK.
+AF\_XDP is a new socket type for raw frames introduced in Linux
+4.18. The current code base offers throughput numbers around 20 Mpps
+per application core for 64-byte packets on a typical Broadwell
+server, however, not much effort was spent on optimizations. The focus
+of this paper is the performance optimizations needed for AF\_XDP to
+get it to the performance levels of user-space network driver packages
+such as DPDK.
 
 We present various optimizations that fall into two broad categories:
 ones that are seamless to the application and ones that requires
-additions to the uapi.
-
-With these optimizations, we show we can reach our goal of close to 40
-Mpps of throughput for 64-byte packets in zero-copy mode. Full
-analysis with performance numbers is presented in the paper.
+additions to the uapi. With these optimizations, we show we can reach
+our goal of close to 40 Mpps of throughput for 64-byte packets in
+zero-copy mode for Rx and close to 70 Mpps for Tx. We end this paper
+by presenting further possible optimizations that will bring the Rx
+performance even higher.
 \end{abstract}
 
 \keywords
@@ -833,14 +833,16 @@ explanatory and/or covered in the optimization section.
 \end{figure}
 
 From the figure, we can see that the performance is increased by 169\%
-or from 25.3 Mpps to 68.0 Mpps with all the Tx optimizations. The highest
-performance gain is found by just tuning the sample application
-slightly. We had not given this much love before, but by just
-increasing the batch size and ring sizes we could gain a substantial
-performance increase. Without the prior optimizations, increasing
-these would not have matered that much. It is the cumulative effect of all
-three optimizations that is seen here. The in-order completion mode
-can increase the throughput even more up to 68.0 Mpps.
+or from 25.3 Mpps to 68.0 Mpps with all the Tx optimizations. (Note
+that we can get more than 59.5 Mpps because we are using two 40 Gbit/s
+NIC cards.) The highest performance gain is found by just tuning the sample
+application slightly. We had not given this much love before, but by
+just increasing the batch size and ring sizes we could gain a
+substantial performance increase. Without the prior optimizations,
+increasing these would not have matered that much. It is the
+cumulative effect of all three optimizations that is seen here. The
+in-order completion mode can increase the throughput even more up to
+68.0 Mpps.
 
 
 \subsection{Combined Results and Busy Poll()}
@@ -960,6 +962,23 @@ lowered maintainability and flexibility of such drivers.
 
 \section{Future Work and Discussion}
 \label{sec:future}
+
+It is clear from the feedback we have gotten from initial users that
+the setup and data plane usage of AF\_XDP needs to become simpler to
+lower the bar of entry. Currently, it seems that users are just
+copying the code from the sample program, which is not a good solution
+in the mid to long term. The {\tt XSK\_ATTACH} optimization presented
+in this paper is the way we propose to facilitate the setup of an
+AF\_XDP socket, but to make the data path simpler to use, we need
+something else. We would like to propose to add a lean and mean access
+library for AF\_XDP sockets to libbpf, in the same manner as XDP has
+added helper functions to facilitate adoption. This could present a
+libc interface (or at least libc-like) to the user with familiar
+functions such as {\tt recv, recvmsg,} and {\tt sendmsg}. This would
+go well with the control plane usage of pure libc functions and the
+already existing usage of {\tt poll, select} and {\tt sendto} in the
+data plane. This library could then also be used to implement a really
+simple DPDK PMD for AF\_XDP.
 
 It would be beneficial to add hugepage support to AF\_XDP, not only
 because it will cut down the TLB miss rate, but more so because it can
