@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.7a -->
+
+<!-- CreationDate: 2018-10-31 08:40:23 -->
+
+<!-- Magnification: 1.05 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="382pt"
+   height="265pt"
+   viewBox="168 -5862 6054 4196"
+   version="1.1"
+   id="svg87"
+   sodipodi:docname="xdp.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata93">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs91">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker2725"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path2723"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="marker2685"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2683"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path986"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path989"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <defs
+       id="defs9">
+      <clipPath
+         id="cp0">
+        <path
+           id="path6"
+           d="M 168,-5862 H 6222 V -1666 H 168 z   M 4965,-4951 5025,-4951 5021,-5290 4970,-5290z"
+           clip-rule="evenodd" />
+      </clipPath>
+    </defs>
+    <defs
+       id="defs20">
+      <clipPath
+         id="cp1">
+        <path
+           id="path17"
+           d="M 168,-5862 H 6222 V -1666 H 168 z   M 4965,-3421 5025,-3421 5021,-3760 4970,-3760z"
+           clip-rule="evenodd" />
+      </clipPath>
+    </defs>
+    <defs
+       id="defs29">
+      <clipPath
+         id="cp2">
+        <path
+           id="path26"
+           d="M 168,-5862 H 6222 V -1666 H 168 z   M 5010,-2116 5070,-2116 5066,-2455 5015,-2455z"
+           clip-rule="evenodd" />
+      </clipPath>
+    </defs>
+    <defs
+       id="defs44">
+      <clipPath
+         id="cp3">
+        <path
+           id="path41"
+           d="M 168,-5862 H 6222 V -1666 H 168 z   M 1995,-4906 2055,-4906 2051,-5245 2000,-5245z"
+           clip-rule="evenodd" />
+      </clipPath>
+    </defs>
+    <defs
+       id="defs55">
+      <clipPath
+         id="cp4">
+        <path
+           id="path52"
+           d="M 168,-5862 H 6222 V -1666 H 168 z   M 3059,-3705 3059,-3765 2720,-3760 2720,-3709z"
+           clip-rule="evenodd" />
+      </clipPath>
+    </defs>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart-9"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path986-6"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart-9-4"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path986-6-1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart-9-48"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path986-6-7"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2725-8"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2723-6"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1163"
+     id="namedview89"
+     showgrid="false"
+     inkscape:zoom="2.6917539"
+     inkscape:cx="254.66667"
+     inkscape:cy="176.66667"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg87">
+    <inkscape:grid
+       type="xygrid"
+       id="grid982" />
+  </sodipodi:namedview>
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="rect2"
+     height="945"
+     width="2745"
+     y="-4320"
+     x="3195" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="rect4"
+     height="540"
+     width="1575"
+     y="-4185"
+     x="4095" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="rect15"
+     height="405"
+     width="2295"
+     y="-2790"
+     x="3915" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="rect35"
+     rx="105"
+     height="630"
+     width="2250"
+     y="-5850"
+     x="1080" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="rect37"
+     height="1350"
+     width="6030"
+     y="-4455"
+     x="180" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="rect39"
+     height="855"
+     width="1575"
+     y="-4320"
+     x="1125" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="rect50"
+     rx="105"
+     height="630"
+     width="2250"
+     y="-5850"
+     x="3870" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text61"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3851.448"
+     x="4690.7578"
+     xml:space="preserve">XDP</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text63"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-5490"
+     x="4542"
+     xml:space="preserve">Application</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text65"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-4770"
+     x="5220"
+     xml:space="preserve">AF_XDP</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text67"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-1890"
+     x="5265"
+     xml:space="preserve">Packets</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text69"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-5490"
+     x="1752"
+     xml:space="preserve">Application</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text71"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3959.2319"
+     x="405"
+     xml:space="preserve">Linux</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text73"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3960"
+     x="1620"
+     xml:space="preserve">Network</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text75"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3960"
+     x="3375"
+     xml:space="preserve">Driver</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text77"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-4905"
+     x="2250"
+     xml:space="preserve">AF_INET</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text79"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-4590"
+     x="2250"
+     xml:space="preserve">AF_PACKET</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text81"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3555"
+     x="1614.24"
+     xml:space="preserve">Stack</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text83"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-2523.2759"
+     x="4541.8994"
+     xml:space="preserve">Network card</text>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:12.85705853;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart)"
+     d="m 2010.3494,-5203.252 v 1043.0478"
+     id="path984"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:13.51919556;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart-9)"
+     d="m 5041.3114,-5194.591 v 1153.248"
+     id="path984-0"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:11.88612461px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2725)"
+     d="M 3436.6844,-3744.1899 H 2723.5169"
+     id="path2681"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:12.35788918;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker2685)"
+     d="m 5041.3114,-3622.104 v 963.6284"
+     id="path984-0-0"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:11.88612556px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker2725-8)"
+     d="m 5041.3114,-1653.8683 v -713.1675"
+     id="path2681-2"
+     inkscape:connector-curvature="0" />
+</svg>

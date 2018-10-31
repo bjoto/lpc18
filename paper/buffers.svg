@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.7a -->
+
+<!-- CreationDate: 2018-10-31 09:42:26 -->
+
+<!-- Magnification: 1.05 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="681pt"
+   height="263pt"
+   viewBox="1110 -5384 10801 4173"
+   version="1.1"
+   id="svg130"
+   sodipodi:docname="buffers.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata136">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs134">
+    <defs
+       id="defs37">
+      <clipPath
+         id="cp0">
+        <path
+           id="path34"
+           d="M 1110,-5384 H 11911 V -1211 H 1110 z   M 7082,-4398 7030,-4367 7198,-4131 7209,-4138z"
+           clip-rule="evenodd" />
+      </clipPath>
+    </defs>
+    <defs
+       id="defs46">
+      <clipPath
+         id="cp1">
+        <path
+           id="path43"
+           d="M 1110,-5384 H 11911 V -1211 H 1110 z   M 10400,-3476 10342,-3461 10435,-3187 10448,-3190z"
+           clip-rule="evenodd" />
+      </clipPath>
+    </defs>
+    <defs
+       id="defs55">
+      <clipPath
+         id="cp2">
+        <path
+           id="path52"
+           d="M 1110,-5384 H 11911 V -1211 H 1110 z   M 6597,-3434 6550,-3396 6749,-3186 6759,-3194z"
+           clip-rule="evenodd" />
+      </clipPath>
+    </defs>
+    <defs
+       id="defs64">
+      <clipPath
+         id="cp3">
+        <path
+           id="path61"
+           d="M 1110,-5384 H 11911 V -1211 H 1110 z   M 8409,-1991 8458,-1957 8604,-2207 8593,-2214z"
+           clip-rule="evenodd" />
+      </clipPath>
+    </defs>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1163"
+     id="namedview132"
+     showgrid="false"
+     inkscape:zoom="1.5099119"
+     inkscape:cx="454"
+     inkscape:cy="175.33333"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg130" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline2"
+     points=" 2475,-4275 2475,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline4"
+     points=" 2925,-4275 2925,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline6"
+     points=" 3375,-4275 3375,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline8"
+     points=" 3825,-4275 3825,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline10"
+     points=" 4275,-4275 4275,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline12"
+     points=" 4725,-4275 4725,-3600" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline14"
+     points=" 5175,-4275 5175,-3600" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="rect16"
+     height="675"
+     width="3600"
+     y="-4275"
+     x="2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline18"
+     points=" 2475,-2925 2475,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline20"
+     points=" 2925,-2925 2925,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline22"
+     points=" 3375,-2925 3375,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline24"
+     points=" 3825,-2925 3825,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline26"
+     points=" 4275,-2925 4275,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline28"
+     points=" 4725,-2925 4725,-2250" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline30"
+     points=" 5175,-2925 5175,-2250" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="rect32"
+     height="675"
+     width="3600"
+     y="-2925"
+     x="2025" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     inkscape:connector-curvature="0"
+     id="path39"
+     clip-path="url(#cp0)"
+     d="m 4950,-4185 a 1247,1247 0 0 1 2250,45" />
+  <polygon
+     style="fill:#000000;stroke:#000000;stroke-width:75px;stroke-miterlimit:8"
+     id="polygon41"
+     stroke-miterlimit="8"
+     points="7082,-4398 7030,-4367 7117,-4279 " />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     inkscape:connector-curvature="0"
+     id="path48"
+     clip-path="url(#cp1)"
+     d="m 5445,-4050 a 2716,2716 0 0 1 4995,855" />
+  <polygon
+     style="fill:#000000;stroke:#000000;stroke-width:75px;stroke-miterlimit:8"
+     id="polygon50"
+     stroke-miterlimit="8"
+     points="10400,-3476 10342,-3461 10400,-3352 " />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     inkscape:connector-curvature="0"
+     id="path57"
+     clip-path="url(#cp2)"
+     d="m 5490,-2790 a 671,671 0 0 1 1260,-405" />
+  <polygon
+     style="fill:#000000;stroke:#000000;stroke-width:75px;stroke-miterlimit:8"
+     id="polygon59"
+     stroke-miterlimit="8"
+     points="6597,-3434 6550,-3396 6649,-3321 " />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     inkscape:connector-curvature="0"
+     id="path66"
+     clip-path="url(#cp3)"
+     d="m 5040,-2295 a 2050,2050 0 0 0 3555,90" />
+  <polygon
+     style="fill:#000000;stroke:#000000;stroke-width:75px;stroke-miterlimit:8"
+     id="polygon68"
+     stroke-miterlimit="8"
+     points="8409,-1991 8458,-1957 8502,-2072 " />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline70"
+     points=" 7650,-3825 11025,-3825" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline72"
+     points=" 6525,-3825 11025,-3825" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline74"
+     points=" 6525,-3375 11025,-3375" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline76"
+     points=" 6525,-2925 11025,-2925" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline78"
+     points=" 6525,-2475 11025,-2475" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline80"
+     points=" 7875,-4275 7875,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline82"
+     points=" 8325,-4275 8325,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline84"
+     points=" 8775,-4275 8775,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline86"
+     points=" 9225,-4275 9225,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline88"
+     points=" 9675,-4275 9675,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline90"
+     points=" 10125,-4275 10125,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline92"
+     points=" 10575,-4275 10575,-2025" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="rect94"
+     height="2250"
+     width="4500"
+     y="-4275"
+     x="6525" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline96"
+     points=" 7425,-4275 7425,-2025" />
+  <polyline
+     style="fill:none;stroke:#000000;stroke-width:8px"
+     id="polyline98"
+     points=" 6975,-4275 6975,-2025" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:216px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text100"
+     font-size="216"
+     font-weight="normal"
+     font-style="normal"
+     y="-2475"
+     x="1125"
+     xml:space="preserve">idx =</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:216px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text102"
+     font-size="216"
+     font-weight="normal"
+     font-style="normal"
+     y="-3825"
+     x="1125"
+     xml:space="preserve">idx =</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:216px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text104"
+     font-size="216"
+     font-weight="normal"
+     font-style="normal"
+     y="-4500"
+     x="8100"
+     xml:space="preserve">Packet Buffer</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:216px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text106"
+     font-size="216"
+     font-weight="normal"
+     font-style="normal"
+     y="-4050"
+     x="11250"
+     xml:space="preserve">0-9</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:216px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text108"
+     font-size="216"
+     font-weight="normal"
+     font-style="normal"
+     y="-3600"
+     x="11250"
+     xml:space="preserve">10-19</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:216px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text110"
+     font-size="216"
+     font-weight="normal"
+     font-style="normal"
+     y="-3150"
+     x="11250"
+     xml:space="preserve">20-29</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:216px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text112"
+     font-size="216"
+     font-weight="normal"
+     font-style="normal"
+     y="-2700"
+     x="11250"
+     xml:space="preserve">30-39</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:216px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text114"
+     font-size="216"
+     font-weight="normal"
+     font-style="normal"
+     y="-2250"
+     x="11250"
+     xml:space="preserve">40-49</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:216px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text116"
+     font-size="216"
+     font-weight="normal"
+     font-style="normal"
+     y="-1800"
+     x="2655"
+     xml:space="preserve">TX Descriptor Ring</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:216px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text118"
+     font-size="216"
+     font-weight="normal"
+     font-style="normal"
+     y="-2475"
+     x="5265"
+     xml:space="preserve">20</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:216px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text120"
+     font-size="216"
+     font-weight="normal"
+     font-style="normal"
+     y="-2475"
+     x="4815"
+     xml:space="preserve">44</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:216px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text122"
+     font-size="216"
+     font-weight="normal"
+     font-style="normal"
+     y="-3825"
+     x="5265"
+     xml:space="preserve">28</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:216px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text124"
+     font-size="216"
+     font-weight="normal"
+     font-style="normal"
+     y="-3825"
+     x="4905"
+     xml:space="preserve">1</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:216px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text126"
+     font-size="216"
+     font-weight="normal"
+     font-style="normal"
+     y="-4500"
+     x="2475"
+     xml:space="preserve">RX Descriptor Ring</text>
+</svg>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.7a -->
+
+<!-- CreationDate: 2018-10-31 09:28:23 -->
+
+<!-- Magnification: 1.05 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="418pt"
+   height="336pt"
+   viewBox="-687 -5142 6626 5321"
+   version="1.1"
+   id="svg87"
+   sodipodi:docname="in_order.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata93">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs91">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path945"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path942"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <defs
+       id="defs19">
+      <clipPath
+         id="cp0">
+        <path
+           id="path16"
+           d="M -687,-5142 H 5939 V 179 H -687 z   M 3974,-2928 3943,-2979 3655,-2799 3681,-2755z"
+           clip-rule="evenodd" />
+      </clipPath>
+    </defs>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1163"
+     id="namedview89"
+     showgrid="true"
+     inkscape:zoom="2.1941964"
+     inkscape:cx="-129.06137"
+     inkscape:cy="224"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg87">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1254" />
+  </sodipodi:namedview>
+  <rect
+     style="fill:none;stroke:#ffffff;stroke-width:8px"
+     id="rect14"
+     height="225"
+     width="360"
+     y="-5130"
+     x="2340" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text81"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-4551.0239"
+     x="119.93661"
+     xml:space="preserve">Standard case</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text83"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-4590"
+     x="3581.6836"
+     xml:space="preserve">In-Order Completion</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text69"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3986.6628"
+     x="-217.9035"
+     xml:space="preserve">TX</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text71"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-4028.3269"
+     x="929.27106"
+     xml:space="preserve">Completion</text>
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect1256-1"
+     width="951.10059"
+     height="653.88159"
+     x="-568.11249"
+     y="-3920.0396" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect1256-4-9"
+     width="951.10059"
+     height="653.88159"
+     x="-568.11249"
+     y="-3266.1582" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect1279-6"
+     width="951.10052"
+     height="2258.8635"
+     x="-568.11249"
+     y="-2612.2764" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192.00003052px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:1"
+     id="text61-9-2"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3528.4907"
+     x="-273.68723"
+     xml:space="preserve">head</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192.00003052px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:1"
+     id="text63-0-1"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-2874.6091"
+     x="-214.29475"
+     xml:space="preserve">tail</text>
+  <g
+     style="fill:none"
+     id="g67-2-2"
+     transform="rotate(90,883.6169,-1020.915)">
+    <text
+       style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+       id="text65-0-0"
+       font-size="192"
+       font-weight="normal"
+       font-style="normal"
+       y="0"
+       x="0"
+       xml:space="preserve">descriptors</text>
+  </g>
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect1256-7"
+     width="951.10059"
+     height="653.88159"
+     x="917.98212"
+     y="-3920.0396" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect1256-4-3"
+     width="951.10059"
+     height="653.88159"
+     x="917.98212"
+     y="-3266.1582" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect1279-1"
+     width="951.10052"
+     height="2258.8635"
+     x="917.98212"
+     y="-2612.2764" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192.00003052px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:1"
+     id="text61-9-1"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3528.4907"
+     x="1212.4075"
+     xml:space="preserve">head</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192.00003052px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:1"
+     id="text63-0-9"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-2874.6089"
+     x="1271.7999"
+     xml:space="preserve">tail</text>
+  <g
+     style="fill:none"
+     id="g67-2-0"
+     transform="rotate(90,1626.6642,-277.86753)">
+    <text
+       style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+       id="text65-0-5"
+       font-size="192"
+       font-weight="normal"
+       font-style="normal"
+       y="0"
+       x="0"
+       xml:space="preserve">descriptors</text>
+  </g>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text49"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3986.6628"
+     x="3465.0486"
+     xml:space="preserve">TX</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+     id="text51"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-4028.3269"
+     x="4621.3818"
+     xml:space="preserve">Completion</text>
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect1256-6"
+     width="951.10059"
+     height="653.88159"
+     x="3117.4019"
+     y="-3920.0396" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect1256-4-7"
+     width="951.10059"
+     height="653.88159"
+     x="3117.4019"
+     y="-3266.1582" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect1279-7"
+     width="951.10052"
+     height="2258.8635"
+     x="3117.4019"
+     y="-2612.2764" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192.00003052px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:1"
+     id="text61-9-4"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3528.4907"
+     x="3411.8271"
+     xml:space="preserve">head</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192.00003052px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:1"
+     id="text63-0-0"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-2874.6091"
+     x="3471.2197"
+     xml:space="preserve">tail</text>
+  <g
+     style="fill:none"
+     id="g67-2-6"
+     transform="rotate(90,2726.374,821.84218)">
+    <text
+       style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+       id="text65-0-4"
+       font-size="192"
+       font-weight="normal"
+       font-style="normal"
+       y="0"
+       x="0"
+       xml:space="preserve">descriptors</text>
+  </g>
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect1256-74"
+     width="951.10059"
+     height="653.88159"
+     x="4603.4966"
+     y="-3920.0396" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect1256-4-8"
+     width="951.10059"
+     height="653.88159"
+     x="4603.4966"
+     y="-3266.1582" />
+  <rect
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect1279-5"
+     width="951.10052"
+     height="2258.8635"
+     x="4603.4966"
+     y="-2612.2764" />
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192.00003052px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:1"
+     id="text61-9-8"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-3528.4907"
+     x="4897.9219"
+     xml:space="preserve">head</text>
+  <text
+     style="font-style:normal;font-weight:normal;font-size:192.00003052px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:1"
+     id="text63-0-2"
+     font-size="192"
+     font-weight="normal"
+     font-style="normal"
+     y="-2874.6089"
+     x="4957.3145"
+     xml:space="preserve">tail</text>
+  <g
+     style="fill:none"
+     id="g67-2-60"
+     transform="rotate(90,3469.4213,1564.8897)">
+    <text
+       style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
+       id="text65-0-6"
+       font-size="192"
+       font-weight="normal"
+       font-style="normal"
+       y="0"
+       x="0"
+       xml:space="preserve">descriptors</text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:8.00113297;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+     d="m 4781.828,-3563.3768 -823.5776,509.3177"
+     id="path1224"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:8.00113297;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 4484.6089,-3979.4833 5673.4845,-293.96895"
+     id="path1608"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:8.00113297;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 4484.6089,-293.96895 5673.4845,-3979.4833"
+     id="path1610"
+     inkscape:connector-curvature="0" />
+</svg>
