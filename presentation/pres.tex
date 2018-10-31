@@ -16,19 +16,39 @@
 \definecolor{White}{HTML}{FFFFFF}
 \setbeamercolor{alerted text}{fg=Blue}
 \setbeamercolor{frametitle}{bg=Blue}
-
 \setbeamercolor{palette primary}{fg=White, bg=Blue}
+
+\setbeamerfont{footnote}{size=\fontsize{3pt}{3pt}\selectfont}
 
 \usepackage{xspace}
 \newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
 
 \title{The Path to DPDK Speeds for AF\_XDP}
-\date{Linux Plumbers Conference, Vancouver, 2018}
-\author{magnus.karlsson@intel.com, bjorn.topel@intel.com}
+\author{Magnus Karlsson, Björn Töpel}
+\date{magnus.karlsson@intel.com, bjorn.topel@intel.com}
+\institute{Linux Plumbers Conference, Vancouver, 2018}
 \titlegraphic{\hfill\includegraphics[width=2cm]{intel-logo.pdf}} 
+
+\newcommand{\srcsize}{\@setfontsize{\srcsize}{3pt}{3pt}}
 
 \begin{document}
   \maketitle
+
+  \begin{frame}{Legal Disclaimer}
+  \tiny
+  \begin{itemize}
+  \item Intel technologies may require enabled hardware, specific software, or services activation. Check with your system manufacturer or retailer.
+  \item No computer system can be absolutely secure.
+  \item Tests document performance of components on a particular test, in specific systems. Differences in hardware, software, or configuration will affect actual performance. Consult other sources of information to evaluate performance as you consider your purchase. For more complete information about performance and benchmark results, visit www.intel.com/benchmarks.
+  \item Cost reduction scenarios described are intended as examples of how a given Intel- based product, in the specified circumstances and configurations, may affect future costs and provide cost savings. Circumstances will vary. Intel does not guarantee any costs or cost reduction.
+  \item All information provided here is subject to change without notice. Contact your Intel representative to obtain the latest Intel product specifications and roadmaps.
+  \item No license (express or implied, by estoppel or otherwise) to any intellectual property rights is granted by this document.
+  \item Intel does not control or audit third-party benchmark data or the web sites referenced in this document. You should visit the referenced web site and confirm whether referenced data are accurate.
+  \item Intel, the Intel logo, and other Intel product and solution names in this presentation are trademarks of Intel.
+  \item Other names and brands may be claimed as the property of others.
+  \item \copyright 2018 Intel Corporation.
+  \end{itemize}
+  \end{frame}
 
   \begin{frame}{XDP 101}
     \centering\resizebox{!}{.95\textheight}{\includegraphics{xdp-new.pdf}}
@@ -67,7 +87,6 @@
         \item Land of Spectres: fewer retpolines, fewer retpolines,
           fewer repolines
       \end{itemize}
-
       \end{itemize}
   \end{frame}
 
@@ -86,8 +105,23 @@
             struct xdp\_rxq\_info} vs explicit, stack-based context
       \end{itemize}
   \end{frame}
-  \begin{frame}{Ingress, results, data not touched}
-    \centering\resizebox{!}{.95\textheight}{\includegraphics{results_rx.pdf}}
+  \begin{frame}{Ingress, results\footnotemark[1], data not touched}
+    \centering\resizebox{!}{.85\textheight}{\includegraphics{results_rx.pdf}}
+      \footnotetext[1]{
+      Results have bee nestimated based on internal Intel analysis and
+      are provided for informational purposes only. Any difference in
+      system hardware or software design or configuration may affect
+      actual performance. Software and workloads used in performance
+      tests may have been optimized for performance only on Intel
+      microprocessors. Performance tests, such as SYSmark and
+      MobileMark, are measured using specific computer systems,
+      components, software, operations and functions. Any change to
+      any of those factors may cause the results to vary. You should
+      consult other information and performance tests to assist you in
+      fully evaluating your contemplated purchases, including the
+      performance of that product when combined with other
+      products. For more information go
+      to http://www.intel.com/performance/datacenter.}
   \end{frame}
 
   \begin{frame}{Egress}
@@ -105,14 +139,44 @@
     \end{columns}
   \end{frame}
 
-  \begin{frame}{Egress, results, data not touched}
-    \centering\resizebox{!}{.95\textheight}{\includegraphics{results_tx.pdf}}
+  \begin{frame}{Egress, results\footnotemark[1], data not touched}
+    \centering\resizebox{!}{.85\textheight}{\includegraphics{results_tx.pdf}}
+      \footnotetext[1]{
+      Results have bee nestimated based on internal Intel analysis and
+      are provided for informational purposes only. Any difference in
+      system hardware or software design or configuration may affect
+      actual performance. Software and workloads used in performance
+      tests may have been optimized for performance only on Intel
+      microprocessors. Performance tests, such as SYSmark and
+      MobileMark, are measured using specific computer systems,
+      components, software, operations and functions. Any change to
+      any of those factors may cause the results to vary. You should
+      consult other information and performance tests to assist you in
+      fully evaluating your contemplated purchases, including the
+      performance of that product when combined with other
+      products. For more information go
+      to http://www.intel.com/performance/datacenter.}
   \end{frame}
   \begin{frame}{Busy poll() vs run-to-completion}
     \centering\resizebox{!}{0.9\textheight}{\includegraphics{two_vs_one_core-new.pdf}}
   \end{frame}
-  \begin{frame}{Busy poll() vs run-to-completion, results}
-    \centering\resizebox{!}{.95\textheight}{\includegraphics{results_poll.pdf}}
+  \begin{frame}{Busy poll() vs run-to-completion, results\footnotemark[1]}
+    \centering\resizebox{!}{.85\textheight}{\includegraphics{results_poll.pdf}}
+      \footnotetext[1]{
+      Results have bee nestimated based on internal Intel analysis and
+      are provided for informational purposes only. Any difference in
+      system hardware or software design or configuration may affect
+      actual performance. Software and workloads used in performance
+      tests may have been optimized for performance only on Intel
+      microprocessors. Performance tests, such as SYSmark and
+      MobileMark, are measured using specific computer systems,
+      components, software, operations and functions. Any change to
+      any of those factors may cause the results to vary. You should
+      consult other information and performance tests to assist you in
+      fully evaluating your contemplated purchases, including the
+      performance of that product when combined with other
+      products. For more information go
+      to http://www.intel.com/performance/datacenter.}
   \end{frame}
 
   \begin{frame}{Comparison with DPDK}
@@ -122,8 +186,23 @@
         \url{http://vger.kernel.org/netconf2018_files/StephenHemminger_netconf2018.pdf}
     \end{itemize}
   \end{frame}
-  \begin{frame}{Comparison with DPDK, results}
-    \centering\resizebox{!}{.95\textheight}{\includegraphics{results_dpdk.pdf}}
+  \begin{frame}{Comparison with DPDK, results\footnotemark[1]}
+    \centering\resizebox{!}{.85\textheight}{\includegraphics{results_dpdk.pdf}}
+      \footnotetext[1]{
+      Results have bee nestimated based on internal Intel analysis and
+      are provided for informational purposes only. Any difference in
+      system hardware or software design or configuration may affect
+      actual performance. Software and workloads used in performance
+      tests may have been optimized for performance only on Intel
+      microprocessors. Performance tests, such as SYSmark and
+      MobileMark, are measured using specific computer systems,
+      components, software, operations and functions. Any change to
+      any of those factors may cause the results to vary. You should
+      consult other information and performance tests to assist you in
+      fully evaluating your contemplated purchases, including the
+      performance of that product when combined with other
+      products. For more information go
+      to http://www.intel.com/performance/datacenter.}
   \end{frame}
 
   \begin{frame}{Next steps}
