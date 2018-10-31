@@ -324,7 +324,7 @@ hardware. Once the hardware has sent the packet, the kernel signals
 that it has indeed sent the packet by returning the packet buffer to
 the application via the completion ring.
 
-\begin{listing*}[ht]
+\begin{listing}[ht]
 \centering
 \begin{minted}[xleftmargin=9pt,fontsize=\scriptsize,tabsize=2]{c}
 sfd = socket(PF_XDP, SOCK_RAW, 0);
@@ -337,21 +337,27 @@ mr.headroom = headroom;
 setsockopt(fd, SOL_XDP, XDP_UMEM_REG, &mr, sizeof(mr));
 
 size = nr_descs_in_fill_queue;
-ret = setsockopt(sfd, SOL_XDP, XDP_UMEM_FILL_RING, &size, sizeof(size));
+ret = setsockopt(sfd, SOL_XDP, XDP_UMEM_FILL_RING,
+                &size, sizeof(size));
 size = nr_descs_in_completion_queue;
-ret = setsockopt(sfd, SOL_XDP, XDP_UMEM_COMPLETION_RING, &size, sizeof(size));
+ret = setsockopt(sfd, SOL_XDP, XDP_UMEM_COMPLETION_RING,
+                &size, sizeof(size));
 
 size = nr_descs_in_rx_queue;
-ret = setsockopt(sfd, SOL_XDP, XDP_RX_RING, &size, sizeof(size));
+ret = setsockopt(sfd, SOL_XDP, XDP_RX_RING,
+                &size, sizeof(size));
 size = nr_descs_in_tx_queue;
-ret = setsockopt(sfd, SOL_XDP, XDP_TX_RING, &size, sizeof(size));
+ret = setsockopt(sfd, SOL_XDP, XDP_TX_RING,
+                &size, sizeof(size));
 
 /* Get the structure of the queues */
 getsockopt(sfd, SOL_XDP, XDP_MMAP_OFFSETS, &off, &optlen);
 
-fill_q = mmap(NULL, off.fr.desc * nr_descs_in_fill_queue * sizeof(u64),
-              PROT_READ | PROT_WRITE, MAP_SHARED | MAP_POPULATE,
-              sfd, XDP_UMEM_PGOFF_FILL_RING);
+fill_q = mmap(NULL, off.fr.desc * nr_descs_in_fill_queue *
+                sizeof(u64),
+                PROT_READ | PROT_WRITE,
+                MAP_SHARED | MAP_POPULATE,
+                sfd, XDP_UMEM_PGOFF_FILL_RING);
 /* ...and so on for all four queues */
 
 sxdp.sxdp_family = PF_XDP;
@@ -361,7 +367,7 @@ bind(sfd, (struct sockaddr *)&sxdp, sizeof(sxdp));
 \end{minted}
 \caption{The control path of AF\_XDP in C-style pseudo-code.}
 \label{lst:ctrl_path}
-\end{listing*}
+\end{listing}
 
 Listing~\ref{lst:ctrl_path} shows the control path in
 pseudo-code. First we have to create an AF\_XDP socket through the
