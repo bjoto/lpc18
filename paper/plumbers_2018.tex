@@ -10,22 +10,19 @@
 \usepackage[hyphens]{url}
 \usepackage{hyperref}
 
-% \usepackage[caption=false]{subfig}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{color}
 \usepackage{graphicx}
+\usepackage{minted}
+\usemintedstyle{bw}
 
-% \usepackage{flushend}
 \usepackage{balance}
-
-%% Some recommended packages.
-\usepackage{booktabs}   %% For formal tables:
-                        %% http://ctan.org/pkg/booktabs
-\usepackage{subcaption} %% For complex figures with subfigures/subcaptions
-                        %% http://ctan.org/pkg/subcaption
+\usepackage{booktabs}
+\usepackage{subcaption}
 \usepackage{tikz}
 \usepackage{pgfplots}
+
 
 \title{The Path to DPDK Speeds for AF\_XDP}
 
@@ -273,10 +270,8 @@ not the actual virtual address. In the same way, the kernel indicates
 ownership transfers in the completion ring by entering the relative
 address of the desired packet buffer into it.
 
-\begin{figure}[ht]
-\centering
-\footnotesize{
-\begin{verbatim}
+\begin{listing}[ht]
+\begin{minted}[xleftmargin=9pt,fontsize=\scriptsize,tabsize=2]{c}
 /* Rx/Tx descriptor */
 struct xdp_desc {
         __u64 addr;
@@ -286,16 +281,15 @@ struct xdp_desc {
 
 /* Fill/Completion descriptor */
 __u64 addr;
-\end{verbatim}
-}
+\end{minted}
 \caption{The descriptors of the Rx, Tx, Fill, and Completion rings.}
-\label{fig:desc_structs}
-\end{figure}
+\label{lst:desc_structs}
+\end{listing}
 
 Now we have a way to transfer ownership of packet buffers without
 sending or receiving any data. To be able to send and receive packet data, we
 need two more rings: the \emph{Rx ring} and the \emph{Tx ring}. As
-seen in Figure~\ref{fig:desc_structs}, the descriptor format of these
+seen in Listing~\ref{lst:desc_structs}, the descriptor format of these
 are larger than the fill and completion rings. When a packet is
 received, the kernel fills in a descriptor in the Rx ring, signifying
 what packet buffer contains the packet data by setting addr to the
@@ -330,10 +324,9 @@ hardware. Once the hardware has sent the packet, the kernel signals
 that it has indeed sent the packet by returning the packet buffer to
 the application via the completion ring.
 
-\begin{figure*}[ht]
+\begin{listing*}[ht]
 \centering
-\footnotesize{
-\begin{verbatim}
+\begin{minted}[xleftmargin=9pt,fontsize=\scriptsize,tabsize=2]{c}
 sfd = socket(PF_XDP, SOCK_RAW, 0);
 
 start_of_umem = malloc(size_of_umem);
@@ -365,13 +358,12 @@ sxdp.sxdp_family = PF_XDP;
 sxdp.sxdp_ifindex = if_nametoindex(interface_name);
 sxdp.sxdp_queue_id = queue_id;
 bind(sfd, (struct sockaddr *)&sxdp, sizeof(sxdp));
-\end{verbatim}
-}
+\end{minted}
 \caption{The control path of AF\_XDP in C-style pseudo-code.}
-\label{fig:ctrl_path}
-\end{figure*}
+\label{lst:ctrl_path}
+\end{listing*}
 
-Figure~\ref{fig:ctrl_path} shows the control path in
+Listing~\ref{lst:ctrl_path} shows the control path in
 pseudo-code. First we have to create an AF\_XDP socket through the
 usual socket() call. After that some memory is allocated for the umem
 and register it through the {\tt setsockopt} option {\tt
@@ -389,10 +381,8 @@ interface as well as the queue id of that interface from which we
 would like to receive traffic from and/or transmit traffic on. This
 concludes the control path of the set up.
 
-\begin{figure}[ht]
-\centering
-\footnotesize{
-\begin{verbatim}
+\begin{listing}[ht]
+\begin{minted}[xleftmargin=9pt,fontsize=\scriptsize,tabsize=2]{c}
 void process_batch(void)
 {
     struct xdp_desc descs[BATCH_SIZE];
@@ -429,14 +419,13 @@ while (1) {
 
     process_batch();
 }
-\end{verbatim}
-}
+\end{minted}
 \caption{The Rx data path of AF\_XDP in C-style pseudo-code.}
-\label{fig:rx_data_path}
-\end{figure}
+\label{lst:rx_data_path}
+\end{listing}
 
 The data path is simpler and is shown in
-Figure~\ref{fig:rx_data_path}. It comes in two main flavors: either a
+Listing~\ref{lst:rx_data_path}. It comes in two main flavors: either a
 run-to-completion-model or by calling {\tt poll()} (or {\tt select()},
 {\tt epoll()}, etc) to receive a packet. In the run-to-completion
 model, the application just busy polls the Rx ring in order to check
@@ -445,10 +434,8 @@ process them. In the {\tt poll()} model, it calls poll when it has
 nothing to do, and when poll returns there is either a packet to
 receive or a timeout has occurred.
 
-\begin{figure}[ht]
-\centering
-\footnotesize{
-\begin{verbatim}
+\begin{listing}[ht]
+\begin{minted}[xleftmargin=9pt,fontsize=\scriptsize,tabsize=2]{c}
 static struct xdp_desc descs[BATCH_SIZE];
 
 int send_batch(descs)
@@ -488,13 +475,12 @@ while (1) {
        ret = poll(fds, 1, 0);
     }
 }
-\end{verbatim}
-}
+\end{minted}
 \caption{The Tx data path of AF\_XDP in C-style pseudo-code.}
-\label{fig:tx_data_path}
-\end{figure}
+\label{lst:tx_data_path}
+\end{listing}
 
-For the Tx path shown in Figure~\ref{fig:tx_data_path}, a descriptor
+For the Tx path shown in Listing~\ref{lst:tx_data_path}, a descriptor
 for the packet to be sent is put in the Tx ring. The kernel can pick
 this up to send it in two ways: either through a sendmsg() syscall
 from the application or through the transmit path NAPI context that
