@@ -19,6 +19,7 @@
 \setbeamercolor{palette primary}{fg=White, bg=Blue}
 
 \setbeamerfont{footnote}{size=\fontsize{3pt}{3pt}\selectfont}
+\setbeamertemplate{frame numbering}[none]
 
 \usepackage{xspace}
 \newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
@@ -53,6 +54,7 @@
   \begin{frame}{XDP 101}
     \centering\resizebox{!}{.95\textheight}{\includegraphics{xdp-new.pdf}}
   \end{frame}
+
   \begin{frame}{AF\_XDP 101}
     \begin{itemize}
     \item Ingress
@@ -64,22 +66,30 @@
       \begin{itemize}
       \item no XDP program
       \end{itemize}
-    \item Register userspace memory to kernel (UMEM)
-    \item Pass packet buffer ownership via rings with descriptors
+    \item Register userspace packet buffer memory to kernel (UMEM)
+    \item Pass packet buffer ownership via descriptor rings
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{AF\_XDP 101}
+    \centering\resizebox{\textwidth}{!}{\includegraphics{queues_and_umem-new.pdf}}
+    \begin{itemize}
     \item Fill ring (to kernel) / Rx ring (from kernel)
     \item Tx ring (to kernel) / Completion ring (from kernel)
     \item copy mode (DMA to/from kernel allocated frames, copy data to user)
     \item zero-copy mode (DMA to/from user allocated frames)
     \end{itemize}
   \end{frame}
-  \begin{frame}{AF\_XDP 101}
-    \centering\resizebox{\textwidth}{!}{\includegraphics{queues_and_umem-new.pdf}}
-  \end{frame}
 
-  \begin{frame}{Baseline and blueprint}
+  \begin{frame}{Baseline and optimization strategy}
       \begin{itemize}
-      \item Baseline: 64B @ \textasciitilde15-22 Mpps
-      \item Blueprint
+      \item Baseline
+      \begin{itemize}
+      \item Linux 4.20
+      \item 64B @ \textasciitilde15-22 Mpps
+      \end{itemize}
+
+      \item Strategy
       \begin{itemize}
         \item do less (instructions)
         \item talk less (coherency traffic)
@@ -88,6 +98,16 @@
           fewer repolines
       \end{itemize}
       \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Experimental Setup}
+  \begin{itemize}
+  \item Broadwell E5-2660 @ 2.7GHz
+  \item 2 cores used for run-to-completion benchmarks
+  \item 1 core used for busy-poll benchmarks
+  \item 2 i40e 40GBit/s netdevs, 2 AF\_XDP sockets
+  \item Ixia load generator blasting at full 40 Gbit/s per NIC
+  \end{itemize}
   \end{frame}
 
   \begin{frame}{Ingress}
@@ -105,6 +125,7 @@
             struct xdp\_rxq\_info} vs explicit, stack-based context
       \end{itemize}
   \end{frame}
+
   \begin{frame}{Ingress, results\footnotemark[1], data not touched}
     \centering\resizebox{!}{.85\textheight}{\includegraphics{results_rx.pdf}}
       \footnotetext[1]{
@@ -131,7 +152,7 @@
     \item Tx performance capped per HW queue $\implies$ multiple Tx
       sockets per UMEM
     \item Larger/more batching, larger descriptor rings
-    \item Dedicated AF\_XDP Tx queues
+    \item Dedicated AF\_XDP HW Tx queues
     \item In-order complettion, {\tt setsockopt} {\tt XDP\_INORDER\_COMPLETION}
     \end{itemize}
     \column{0.5\textwidth}      
@@ -157,9 +178,11 @@
       products. For more information go
       to http://www.intel.com/performance/datacenter.}
   \end{frame}
+
   \begin{frame}{Busy poll() vs run-to-completion}
     \centering\resizebox{!}{0.9\textheight}{\includegraphics{two_vs_one_core-new.pdf}}
   \end{frame}
+
   \begin{frame}{Busy poll() vs run-to-completion, results\footnotemark[1]}
     \centering\resizebox{!}{.85\textheight}{\includegraphics{results_poll.pdf}}
       \footnotetext[1]{
@@ -186,6 +209,7 @@
         \url{http://vger.kernel.org/netconf2018_files/StephenHemminger_netconf2018.pdf}
     \end{itemize}
   \end{frame}
+
   \begin{frame}{Comparison with DPDK, results\footnotemark[1]}
     \centering\resizebox{!}{.85\textheight}{\includegraphics{results_dpdk.pdf}}
       \footnotetext[1]{
@@ -211,9 +235,9 @@
       \item XDP: switch-statement
       \item Rx/Tx: drivers
       \item Rx: {\tt XDP\_ATTTACH} and {\tt bpf\_xsk\_redirect}
+      \item libbpf AF\_XDP support
       \item Tx: multiple Tx sockets per UMEM
-      \item General leftovers still to-be-upstreamed: libbpf AF\_XDP
-        support (easier to consume), selftest
+      \item selftest, samples
     \end{itemize}    
   \end{frame}
 
@@ -229,6 +253,16 @@
     \end{itemize}
   \end{frame}
   % TODO Talk about built-in plus copy for tcpdump based on AF_XDP?
+
+  \begin{frame}{TL;DR}
+  \begin{itemize}
+  \item Rx 15.1 to 39.3 Mpps (260\%)
+  \item Tx 25.3 to 68.0 Mpps (269\%)
+  \item Busy poll() promising
+  \item DPDK still faster for ``notouch'', but AF\_XDP on par when data is touched
+  \item drivers need to change when skb is not the only consumer
+  \end{itemize}
+  \end{frame}
 
   \begin{frame}{Thanks!}
   \begin{columns}[T,onlytextwidth]
