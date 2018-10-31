@@ -270,7 +270,7 @@ not the actual virtual address. In the same way, the kernel indicates
 ownership transfers in the completion ring by entering the relative
 address of the desired packet buffer into it.
 
-\begin{listing}[ht]
+\begin{listing}[p]
 \begin{minted}[xleftmargin=9pt,fontsize=\scriptsize,tabsize=2]{c}
 /* Rx/Tx descriptor */
 struct xdp_desc {
@@ -324,7 +324,7 @@ hardware. Once the hardware has sent the packet, the kernel signals
 that it has indeed sent the packet by returning the packet buffer to
 the application via the completion ring.
 
-\begin{listing}[ht]
+\begin{listing}[p]
 \centering
 \begin{minted}[xleftmargin=9pt,fontsize=\scriptsize,tabsize=2]{c}
 sfd = socket(PF_XDP, SOCK_RAW, 0);
@@ -387,7 +387,7 @@ interface as well as the queue id of that interface from which we
 would like to receive traffic from and/or transmit traffic on. This
 concludes the control path of the set up.
 
-\begin{listing}[ht]
+\begin{listing}[p]
 \begin{minted}[xleftmargin=9pt,fontsize=\scriptsize,tabsize=2]{c}
 void process_batch(void)
 {
@@ -440,7 +440,7 @@ process them. In the {\tt poll()} model, it calls poll when it has
 nothing to do, and when poll returns there is either a packet to
 receive or a timeout has occurred.
 
-\begin{listing}[ht]
+\begin{listing}[p]
 \begin{minted}[xleftmargin=9pt,fontsize=\scriptsize,tabsize=2]{c}
 static struct xdp_desc descs[BATCH_SIZE];
 
