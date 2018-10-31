@@ -21,7 +21,7 @@
 \usepackage{booktabs}
 \usepackage{subcaption}
 \usepackage{tikz}
-\usepackage{pgfplots}
+% \usepackage{pgfplots}
 
 
 \title{The Path to DPDK Speeds for AF\_XDP}
@@ -204,7 +204,7 @@ to explain some of its features first to see how AF\_XDP builds on top
 of it.
 
 \begin{figure}[ht]
-\includegraphics[width=.5\textwidth]{xdp.pdf}
+\includegraphics[width=.48\textwidth]{xdp.pdf}
 \caption{XDP can process special user space applications in the kernel
   driver. AF\_XDP is the mechanism for which XDP can directly redirect
   packets up to an application in user-space with zero-copy semantics.}
@@ -498,7 +498,7 @@ ring in order to be able to reuse packet buffers once the kernel has
 sent them.
 
 \begin{figure}[ht]
-\includegraphics[width=.5\textwidth]{two_vs_one_core.pdf}
+\includegraphics[width=.48\textwidth]{two_vs_one_core.pdf}
 \caption{When run normally, AF\_XDP will consume two cores in our
   experiments, but if busy poll() support is used both application and
   Rx/Tx processing can run efficiently on a single core.}
@@ -640,7 +640,7 @@ but will work for any driver.
 \subsection{In-Order Completion}
 
 \begin{figure}[t]
-\includegraphics[width=.5\textwidth]{in_order.pdf}
+\includegraphics[width=.48\textwidth]{in_order.pdf}
 \caption{Normally, the head pointer in the completion ring signals
   that packet buffers have completed and which one have to be read out
 from the completion ring itself. With the in-order optimization, the

@@ -28,7 +28,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -87,7 +87,7 @@
      id="namedview89"
      showgrid="true"
      inkscape:zoom="2.1941964"
-     inkscape:cx="-129.06137"
+     inkscape:cx="278.66667"
      inkscape:cy="224"
      inkscape:window-x="1920"
      inkscape:window-y="0"
@@ -120,7 +120,7 @@
      font-weight="normal"
      font-style="normal"
      y="-4590"
-     x="3581.6836"
+     x="3046.6897"
      xml:space="preserve">In-Order Completion</text>
   <text
      style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
@@ -253,7 +253,7 @@
      font-weight="normal"
      font-style="normal"
      y="-3986.6628"
-     x="3465.0486"
+     x="2930.0547"
      xml:space="preserve">TX</text>
   <text
      style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
@@ -262,28 +262,28 @@
      font-weight="normal"
      font-style="normal"
      y="-4028.3269"
-     x="4621.3818"
+     x="4086.3879"
      xml:space="preserve">Completion</text>
   <rect
      style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect1256-6"
      width="951.10059"
      height="653.88159"
-     x="3117.4019"
+     x="2582.408"
      y="-3920.0396" />
   <rect
      style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect1256-4-7"
      width="951.10059"
      height="653.88159"
-     x="3117.4019"
+     x="2582.408"
      y="-3266.1582" />
   <rect
      style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect1279-7"
      width="951.10052"
      height="2258.8635"
-     x="3117.4019"
+     x="2582.408"
      y="-2612.2764" />
   <text
      style="font-style:normal;font-weight:normal;font-size:192.00003052px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:1"
@@ -292,7 +292,7 @@
      font-weight="normal"
      font-style="normal"
      y="-3528.4907"
-     x="3411.8271"
+     x="2876.8333"
      xml:space="preserve">head</text>
   <text
      style="font-style:normal;font-weight:normal;font-size:192.00003052px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:1"
@@ -301,12 +301,12 @@
      font-weight="normal"
      font-style="normal"
      y="-2874.6091"
-     x="3471.2197"
+     x="2936.2258"
      xml:space="preserve">tail</text>
   <g
      style="fill:none"
      id="g67-2-6"
-     transform="rotate(90,2726.374,821.84218)">
+     transform="rotate(90,2458.877,554.34522)">
     <text
        style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
        id="text65-0-4"
@@ -322,21 +322,21 @@
      id="rect1256-74"
      width="951.10059"
      height="653.88159"
-     x="4603.4966"
+     x="4068.5027"
      y="-3920.0396" />
   <rect
      style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect1256-4-8"
      width="951.10059"
      height="653.88159"
-     x="4603.4966"
+     x="4068.5027"
      y="-3266.1582" />
   <rect
      style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.00113392;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect1279-5"
      width="951.10052"
      height="2258.8635"
-     x="4603.4966"
+     x="4068.5027"
      y="-2612.2764" />
   <text
      style="font-style:normal;font-weight:normal;font-size:192.00003052px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:1"
@@ -345,7 +345,7 @@
      font-weight="normal"
      font-style="normal"
      y="-3528.4907"
-     x="4897.9219"
+     x="4362.9277"
      xml:space="preserve">head</text>
   <text
      style="font-style:normal;font-weight:normal;font-size:192.00003052px;font-family:Times;text-anchor:start;fill:#000000;stroke-width:1"
@@ -354,12 +354,12 @@
      font-weight="normal"
      font-style="normal"
      y="-2874.6089"
-     x="4957.3145"
+     x="4422.3203"
      xml:space="preserve">tail</text>
   <g
      style="fill:none"
      id="g67-2-60"
-     transform="rotate(90,3469.4213,1564.8897)">
+     transform="rotate(90,3201.9243,1297.3927)">
     <text
        style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
        id="text65-0-6"
@@ -372,17 +372,17 @@
   </g>
   <path
      style="fill:none;stroke:#000000;stroke-width:8.00113297;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
-     d="m 4781.828,-3563.3768 -823.5776,509.3177"
+     d="m 4246.8341,-3563.3768 -823.5776,509.3177"
      id="path1224"
      inkscape:connector-curvature="0" />
   <path
      style="fill:none;stroke:#000000;stroke-width:8.00113297;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="M 4484.6089,-3979.4833 5673.4845,-293.96895"
+     d="M 3949.615,-3979.4833 5138.4906,-293.96895"
      id="path1608"
      inkscape:connector-curvature="0" />
   <path
      style="fill:none;stroke:#000000;stroke-width:8.00113297;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="M 4484.6089,-293.96895 5673.4845,-3979.4833"
+     d="M 3949.615,-293.96895 5138.4906,-3979.4833"
      id="path1610"
      inkscape:connector-curvature="0" />
 </svg>

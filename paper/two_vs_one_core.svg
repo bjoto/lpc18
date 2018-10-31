@@ -28,7 +28,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -48,7 +48,7 @@
      id="namedview40"
      showgrid="false"
      inkscape:zoom="2.6707792"
-     inkscape:cx="260.6363"
+     inkscape:cx="256.66667"
      inkscape:cy="139.33333"
      inkscape:window-x="1920"
      inkscape:window-y="0"
@@ -93,7 +93,7 @@
      height="675"
      width="1575"
      y="-2925"
-     x="5625" />
+     x="5037.7876" />
   <rect
      style="fill:none;stroke:#000000;stroke-width:8px"
      id="rect12"
@@ -101,7 +101,7 @@
      height="675"
      width="1575"
      y="-3825"
-     x="5625" />
+     x="5037.7876" />
   <rect
      style="fill:none;stroke:#000000;stroke-width:8px"
      id="rect14"
@@ -109,7 +109,7 @@
      height="675"
      width="1575"
      y="-4725"
-     x="5625" />
+     x="5037.7876" />
   <rect
      style="fill:none;stroke:#ffffff;stroke-width:8px"
      id="rect16"
@@ -160,7 +160,7 @@
      font-weight="normal"
      font-style="normal"
      y="-2523.948"
-     x="6161.2378"
+     x="5574.0254"
      xml:space="preserve">Core 1</text>
   <text
      style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
@@ -169,7 +169,7 @@
      font-weight="normal"
      font-style="normal"
      y="-4342.7642"
-     x="5959.5"
+     x="5372.2876"
      xml:space="preserve">Application</text>
   <text
      style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
@@ -178,7 +178,7 @@
      font-weight="normal"
      font-style="normal"
      y="-3423.948"
-     x="6167.4463"
+     x="5580.2339"
      xml:space="preserve">Rx/Tx</text>
   <text
      style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
@@ -187,7 +187,7 @@
      font-weight="normal"
      font-style="normal"
      y="-5040"
-     x="5980.7578"
+     x="5393.5454"
      xml:space="preserve">Busy poll()</text>
   <text
      style="font-style:normal;font-weight:normal;font-size:192px;font-family:Times;text-anchor:start;fill:#000000"
