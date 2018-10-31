@@ -6,7 +6,8 @@ set xtics ("rxdrop" 1.75)
 set ylabel "Mpps"
 
 set boxwidth 0.5
-set style fill solid
+set for [i=1:64] linetype i lw 1 lc rgb "black" pt 7
+set style fill pattern 0 border -1
 set format x ""
 
 plot [0:3.5][0:90] 'results_rx.data' every 6 using 1:2 with boxes ls 1 title "Baseline", 'results_rx.data' every 6::1 using 1:2 with boxes ls 2 title "XDP ATTACH", 'results_rx.data' every 6::2 using 1:2 with boxes ls 3 title "Remove indirect call in XDP path", 'results_rx.data' every 6::3 using 1:2 with boxes ls 4 title "Replace switch in driver", 'results_rx.data' every 6::4 using 1:2 with boxes ls 5 title "Various driver opts", 'results_rx.data' every 6::5 using 1:2 with boxes ls 6 title "Explicit context in XDP path", "" u 1:2:2 with labels offset char 0,1 title ""
