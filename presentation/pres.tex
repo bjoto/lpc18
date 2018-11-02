@@ -59,12 +59,12 @@
     \begin{itemize}
     \item Ingress
       \begin{itemize}
-      \item userspace XDP packet sink
+      \item Userspace XDP packet sink
       \item {\tt XDP\_REDIRECT} to socket via {\tt XSKMAP}
       \end{itemize}
     \item Egress
       \begin{itemize}
-      \item no XDP program
+      \item No XDP program
       \end{itemize}
     \item Register userspace packet buffer memory to kernel (UMEM)
     \item Pass packet buffer ownership via descriptor rings
@@ -76,8 +76,8 @@
     \begin{itemize}
     \item Fill ring (to kernel) / Rx ring (from kernel)
     \item Tx ring (to kernel) / Completion ring (from kernel)
-    \item copy mode (DMA to/from kernel allocated frames, copy data to user)
-    \item zero-copy mode (DMA to/from user allocated frames)
+    \item Copy mode (DMA to/from kernel allocated frames, copy data to user)
+    \item Zero-copy mode (DMA to/from user allocated frames)
     \end{itemize}
   \end{frame}
 
@@ -91,9 +91,9 @@
 
       \item Strategy
       \begin{itemize}
-        \item do less (instructions)
-        \item talk less (coherency traffic)
-        \item do more at the same time (batching, i\$)
+        \item Do less (instructions)
+        \item Talk less (coherency traffic)
+        \item Do more at the same time (batching, i\$)
         \item Land of Spectres: fewer retpolines, fewer retpolines,
           fewer repolines
       \end{itemize}
@@ -105,7 +105,7 @@
   \item Broadwell E5-2660 @ 2.7GHz
   \item 2 cores used for run-to-completion benchmarks
   \item 1 core used for busy-poll benchmarks
-  \item 2 i40e 40GBit/s netdevs, 2 AF\_XDP sockets
+  \item 2 i40e 40GBit/s NICs, 2 AF\_XDP sockets
   \item Ixia load generator blasting at full 40 Gbit/s per NIC
   \end{itemize}
   \end{frame}
@@ -115,10 +115,10 @@
         \item {\tt XDP\_ATTACH} and {\tt bpf\_xsk\_redirect}, attach
           at-most one socket per netdev queue, load built-in XDP
           program, 2-level hierarchy
-        \item remove indirect call, {\tt bpf\_prog\_run\_xdp}
-        \item remove indirect call, XDP actions switch-statement ($>=5
+        \item Remove indirect call, {\tt bpf\_prog\_run\_xdp}
+        \item Remove indirect call, XDP actions switch-statement ($>=5
           \implies$ jump table)
-        \item driver optimizations (batching, code restructure)
+        \item Driver optimizations (batching, code restructure)
         \item {\tt bpf\_prog\_run\_xdp}, {\tt xdp\_do\_redirect} and
           {\tt xdp\_do\_flush\_map}: per-CPU {\tt struct
             bpf\_redirect\_info} + {\tt struct xdp\_buff} + {\tt
@@ -129,7 +129,7 @@
   \begin{frame}{Ingress, results\footnotemark[1], data not touched}
     \centering\resizebox{!}{.85\textheight}{\includegraphics{results_rx.pdf}}
       \footnotetext[1]{
-      Results have bee nestimated based on internal Intel analysis and
+      Results have bee estimated based on internal Intel analysis and
       are provided for informational purposes only. Any difference in
       system hardware or software design or configuration may affect
       actual performance. Software and workloads used in performance
@@ -153,7 +153,7 @@
       sockets per UMEM
     \item Larger/more batching, larger descriptor rings
     \item Dedicated AF\_XDP HW Tx queues
-    \item In-order complettion, {\tt setsockopt} {\tt XDP\_INORDER\_COMPLETION}
+    \item In-order completion, {\tt setsockopt} {\tt XDP\_INORDER\_COMPLETION}
     \end{itemize}
     \column{0.5\textwidth}      
     \centering\resizebox{\textwidth}{!}{\includegraphics{in_order-new.pdf}}
@@ -163,7 +163,7 @@
   \begin{frame}{Egress, results\footnotemark[1], data not touched}
     \centering\resizebox{!}{.85\textheight}{\includegraphics{results_tx.pdf}}
       \footnotetext[1]{
-      Results have bee nestimated based on internal Intel analysis and
+      Results have bee estimated based on internal Intel analysis and
       are provided for informational purposes only. Any difference in
       system hardware or software design or configuration may affect
       actual performance. Software and workloads used in performance
@@ -186,7 +186,7 @@
   \begin{frame}{Busy poll() vs run-to-completion, results\footnotemark[1]}
     \centering\resizebox{!}{.85\textheight}{\includegraphics{results_poll.pdf}}
       \footnotetext[1]{
-      Results have bee nestimated based on internal Intel analysis and
+      Results have bee estimated based on internal Intel analysis and
       are provided for informational purposes only. Any difference in
       system hardware or software design or configuration may affect
       actual performance. Software and workloads used in performance
@@ -213,7 +213,7 @@
   \begin{frame}{Comparison with DPDK, results\footnotemark[1]}
     \centering\resizebox{!}{.85\textheight}{\includegraphics{results_dpdk.pdf}}
       \footnotetext[1]{
-      Results have bee nestimated based on internal Intel analysis and
+      Results have bee estimated based on internal Intel analysis and
       are provided for informational purposes only. Any difference in
       system hardware or software design or configuration may affect
       actual performance. Software and workloads used in performance
@@ -243,24 +243,24 @@
 
   \begin{frame}{Future work}
     \begin{itemize}
-    \item hugepage support, less fill ring traffic ({\tt
+    \item Hugepage support, less fill ring traffic ({\tt
       get\_user\_pages})
     \item fd.io/VPP work vectors (i\$, explicit batching in function calls)
     \item ``XDP first'' drivers 
-    \item collaborate/share code with RDMA (e.g. {\tt
+    \item Collaborate/share code with RDMA (e.g. {\tt
       get\_user\_pages})
     \item Type-writer model (currently not planned)
     \end{itemize}
   \end{frame}
   % TODO Talk about built-in plus copy for tcpdump based on AF_XDP?
 
-  \begin{frame}{TL;DR}
+  \begin{frame}{Summary}
   \begin{itemize}
-  \item Rx 15.1 to 39.3 Mpps (260\%)
-  \item Tx 25.3 to 68.0 Mpps (269\%)
+  \item Rx 15.1 to 39.3 Mpps (2.6x)
+  \item Tx 25.3 to 68.0 Mpps (2.7x)
   \item Busy poll() promising
   \item DPDK still faster for ``notouch'', but AF\_XDP on par when data is touched
-  \item drivers need to change when skb is not the only consumer
+  \item Drivers need to change when skb is not the only consumer
   \end{itemize}
   \end{frame}
 
