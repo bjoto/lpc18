@@ -47,12 +47,12 @@ of this paper is the performance optimizations needed for AF\_XDP to
 get it to the performance levels of user-space network driver packages
 such as DPDK.
 
-We present various optimizations that fall into two broad categories:
-ones that are seamless to the application and ones that requires
-additions to the uapi. With these optimizations, we show we can reach
-our goal of close to 40 Mpps of throughput for 64-byte packets in
-zero-copy mode for Rx and close to 70 Mpps for Tx. We end this paper
-by presenting further possible optimizations that will bring the Rx
+In this paper, we present various optimizations that fall into two
+broad categories: ones that are seamless to the application and ones
+that requires additions to the uapi. With these optimizations, we can
+reach our goal of close to 40 Mpps of throughput for 64-byte packets
+for Rx and close to 70 Mpps for Tx. We end this paper by presenting
+further possible optimizations that would hopefully bring the Rx
 performance even higher.
 \end{abstract}
 
@@ -963,22 +963,22 @@ lowered maintainability and flexibility of such drivers.
 \section{Future Work and Discussion}
 \label{sec:future}
 
-It is clear from the feedback we have gotten from initial users that
-the setup and data plane usage of AF\_XDP needs to become simpler to
-lower the bar of entry. Currently, it seems that users are just
-copying the code from the sample program, which is not a good solution
-in the mid to long term. The {\tt XSK\_ATTACH} optimization presented
-in this paper is the way we propose to facilitate the setup of an
-AF\_XDP socket, but to make the data path simpler to use, we need
-something else. We would like to propose to add a lean and mean access
-library for AF\_XDP sockets to libbpf, in the same manner as XDP has
-added helper functions to facilitate adoption. This could present a
-libc interface (or at least libc-like) to the user with familiar
-functions such as {\tt recv, recvmsg,} and {\tt sendmsg}. This would
-go well with the control plane usage of pure libc functions and the
-already existing usage of {\tt poll, select} and {\tt sendto} in the
-data plane. This library could then also be used to implement a really
-simple DPDK PMD for AF\_XDP.
+It is clear from the initial user feedback we have gotten that the
+setup and data plane usage of AF\_XDP need to become simpler to lower
+the bar of entry. Currently, it seems that users are just copying the
+code from the sample program, which is not a good solution in the mid
+to long term. The {\tt XSK\_ATTACH} optimization presented in this
+paper is the way we propose to facilitate the setup of an AF\_XDP
+socket. But to make the data path simpler to use, we need something
+else. We would like to propose to add a lean and mean access library
+for AF\_XDP sockets to libbpf, in the same manner as XDP has added
+helper functions to facilitate adoption of XDP programs. The library
+could present a libc interface (or at least libc-like) to the user
+with familiar functions such as {\tt recv, recvmsg,} and {\tt
+  sendmsg}. This would go well with the control plane usage of pure
+libc functions and the already existing usage of {\tt poll, select,
+  read, write} and {\tt sendto} in the data plane. The library could
+also be used to implement a really simple DPDK PMD for AF\_XDP.
 
 It would be beneficial to add hugepage support to AF\_XDP, not only
 because it will cut down the TLB miss rate, but more so because it can
