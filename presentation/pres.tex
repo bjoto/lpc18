@@ -1,10 +1,10 @@
 \pdfoutput=1
 \pdfminorversion=7
 
-\documentclass[aspectratio=169]{beamer}
-% \documentclass{beamer}
+\documentclass[aspectratio=169, xcolor=table]{beamer}
+%\documentclass{beamer}
 
-\usetheme{metropolis}
+%\usetheme{metropolis}
 
 % Intel palette
 \definecolor{DarkBlue}{HTML}{003C71}
@@ -12,28 +12,69 @@
 \definecolor{LightBlue}{HTML}{00AEEF}
 \definecolor{Gray}{HTML}{B1BABF}
 \definecolor{Orange}{HTML}{FFA300}
+\definecolor{Yellow}{HTML}{F3D54E}
 \definecolor{Red}{HTML}{FC4C02}
+\definecolor{Green}{HTML}{C3D600}
 \definecolor{White}{HTML}{FFFFFF}
-\setbeamercolor{alerted text}{fg=Blue}
-\setbeamercolor{frametitle}{bg=Blue}
-\setbeamercolor{palette primary}{fg=White, bg=Blue}
+\definecolor{Turquoise}{HTML}{00719F}
 
-\setbeamerfont{footnote}{size=\fontsize{3pt}{3pt}\selectfont}
-\setbeamertemplate{frame numbering}[none]
+%\setbeamercolor{alerted text}{fg=Blue}
+%\setbeamercolor{frametitle}{bg=black}
+% \setbeamercolor{palette primary}{fg=White, bg=Blue}
+\setbeamercolor{normal text}{bg=White, fg=DarkBlue}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{author}{fg=white}
+\setbeamercolor{institute}{fg=Yellow}
+\setbeamercolor{frametitle}{fg=DarkBlue}
+%\setbeamercolor{titlelike}{use=normal text, parent=normal text}
+\setbeamercolor{structure}{use=normal text, fg=normal text.fg}
+\setbeamercolor{palette primary}{%
+  use=normal text,
+  fg=normal text.bg,
+  bg=normal text.fg
+}
 
+% \setbeamerfont{footnote}{size=\fontsize{3pt}{3pt}\selectfont}
+% \setbeamertemplate{frame numbering}[counter]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}{\textbullet}
+
+\usefonttheme{metropolis}
+%\setbeamerfont{footnote}{size=\fontsize{3pt}{3pt}\selectfont}
+
+\usepackage{etoolbox}
+\usepackage{pgfopts}
 \usepackage{xspace}
-\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\usepackage{tikz}
+\usepackage[scale=2]{ccicons}
 
 \title{The Path to DPDK Speeds for AF\_XDP}
-\author{Magnus Karlsson, Björn Töpel}
-\date{magnus.karlsson@intel.com, bjorn.topel@intel.com}
+\author{Magnus Karlsson, magnus.karlsson@intel.com\\ Björn Töpel, bjorn.topel@intel.com}
 \institute{Linux Plumbers Conference, Vancouver, 2018}
-\titlegraphic{\hfill\includegraphics[width=2cm]{intel-logo.pdf}} 
+\date{}
 
-\newcommand{\srcsize}{\@setfontsize{\srcsize}{3pt}{3pt}}
+\setbeamertemplate{footline}{
+  \begin{tikzpicture}[remember picture,overlay,font=\tiny]
+    \shade[left color=DarkBlue,right color=Turquoise] (current page.south west) rectangle (\paperwidth,.5);
+    %    \node [inner sep=0pt, anchor=west, text=white] at (4pt,0.25) {{\bf SWPC 2018}\ \ \ \ Software Empowering Intel};
+    %    \node [inner sep=0pt, text=white] at (.5\paperwidth,0.25) {Intel Confidential};
+    \node [inner sep=0pt, anchor=west] at (4pt,0.25) {\includegraphics[scale=.15]{intel-white.png}};
+    \node [inner sep=4pt, anchor=east, text=white] at (\paperwidth,0.25) {\insertframenumber};
+  \end{tikzpicture}
+}
 
 \begin{document}
+  {%
+  \setbeamertemplate{footline}{}
+  \setbeamertemplate{background canvas}{
+  \begin{tikzpicture}[remember picture,overlay]
+    \shade[left color=DarkBlue,right color=Turquoise] (current page.south west) rectangle (current page.north east);
+    \node [inner sep=10pt, anchor=south east] at (current page.south east) {\includegraphics[scale=.3]{lpc_weblogo-2017.png}};
+    \node [inner sep=10pt, anchor=north west] at (current page.north west) {\includegraphics[scale=.75]{intel-white.png}};
+  \end{tikzpicture}
+  }
   \maketitle
+  }
 
   \begin{frame}{Legal Disclaimer}
   \tiny
@@ -52,7 +93,11 @@
   \end{frame}
 
   \begin{frame}{XDP 101}
-    \centering\resizebox{!}{.95\textheight}{\includegraphics{xdp-new.pdf}}
+  \begin{center}
+  \resizebox{!}{.75\textheight}{\includegraphics{kernel-diagram.pdf}}\\
+    \vfill
+  {\fontsize{3pt}{3pt}\selectfont Licensed under a \href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons Attribution-ShareAlike 4.0 International License} \ccbysa.}
+  \end{center}
   \end{frame}
 
   \begin{frame}{AF\_XDP 101}
@@ -72,7 +117,7 @@
   \end{frame}
 
   \begin{frame}{AF\_XDP 101}
-    \centering\resizebox{\textwidth}{!}{\includegraphics{queues_and_umem-new.pdf}}
+    \centering\includegraphics[scale=.4]{basic-concepts-rings.pdf}
     \begin{itemize}
     \item Fill ring (to kernel) / Rx ring (from kernel)
     \item Tx ring (to kernel) / Completion ring (from kernel)
@@ -95,7 +140,7 @@
         \item Talk less (coherency traffic)
         \item Do more at the same time (batching, i\$)
         \item Land of Spectres: fewer retpolines, fewer retpolines,
-          fewer repolines
+          fewer retpolines
       \end{itemize}
       \end{itemize}
   \end{frame}
@@ -126,24 +171,25 @@
       \end{itemize}
   \end{frame}
 
-  \begin{frame}{Ingress, results\footnotemark[1], data not touched}
-    \centering\resizebox{!}{.85\textheight}{\includegraphics{results_rx.pdf}}
-      \footnotetext[1]{
-      Results have bee estimated based on internal Intel analysis and
-      are provided for informational purposes only. Any difference in
-      system hardware or software design or configuration may affect
-      actual performance. Software and workloads used in performance
-      tests may have been optimized for performance only on Intel
-      microprocessors. Performance tests, such as SYSmark and
-      MobileMark, are measured using specific computer systems,
-      components, software, operations and functions. Any change to
-      any of those factors may cause the results to vary. You should
-      consult other information and performance tests to assist you in
-      fully evaluating your contemplated purchases, including the
-      performance of that product when combined with other
-      products. For more information go
-      to http://www.intel.com/performance/datacenter.}
+  {%
+  \begin{frame}{Ingress, results, data not touched}
+  \fontsize{3pt}{2pt}\selectfont
+    \begin{center}\resizebox{!}{.70\textheight}{\includegraphics{results_rx.pdf}}\end{center}
+  Results have bee estimated based on internal Intel analysis and are
+  provided for informational purposes only. Any difference in system
+  hardware or software design or configuration may affect actual
+  performance. Software and workloads used in performance tests may
+  have been optimized for performance only on Intel
+  microprocessors. Performance tests, such as SYSmark and MobileMark,
+  are measured using specific computer systems, components, software,
+  operations and functions. Any change to any of those factors may
+  cause the results to vary. You should consult other information and
+  performance tests to assist you in fully evaluating your
+  contemplated purchases, including the performance of that product
+  when combined with other products. For more information go to
+  http://www.intel.com/performance/datacenter.  
   \end{frame}
+  }
 
   \begin{frame}{Egress}
   \begin{columns}[T,onlytextwidth]
@@ -160,47 +206,50 @@
     \end{columns}
   \end{frame}
 
-  \begin{frame}{Egress, results\footnotemark[1], data not touched}
-    \centering\resizebox{!}{.85\textheight}{\includegraphics{results_tx.pdf}}
-      \footnotetext[1]{
-      Results have bee estimated based on internal Intel analysis and
-      are provided for informational purposes only. Any difference in
-      system hardware or software design or configuration may affect
-      actual performance. Software and workloads used in performance
-      tests may have been optimized for performance only on Intel
-      microprocessors. Performance tests, such as SYSmark and
-      MobileMark, are measured using specific computer systems,
-      components, software, operations and functions. Any change to
-      any of those factors may cause the results to vary. You should
-      consult other information and performance tests to assist you in
-      fully evaluating your contemplated purchases, including the
-      performance of that product when combined with other
-      products. For more information go
-      to http://www.intel.com/performance/datacenter.}
+  {%
+  \begin{frame}{Egress, results, data not touched}
+  \fontsize{3pt}{2pt}\selectfont
+    \begin{center}\resizebox{!}{.70\textheight}{\includegraphics{results_tx.pdf}}\end{center}
+  Results have bee estimated based on internal Intel analysis and are
+  provided for informational purposes only. Any difference in system
+  hardware or software design or configuration may affect actual
+  performance. Software and workloads used in performance tests may
+  have been optimized for performance only on Intel
+  microprocessors. Performance tests, such as SYSmark and MobileMark,
+  are measured using specific computer systems, components, software,
+  operations and functions. Any change to any of those factors may
+  cause the results to vary. You should consult other information and
+  performance tests to assist you in fully evaluating your
+  contemplated purchases, including the performance of that product
+  when combined with other products. For more information go to
+  http://www.intel.com/performance/datacenter.  
   \end{frame}
+  }
 
   \begin{frame}{Busy poll() vs run-to-completion}
-    \centering\resizebox{!}{0.9\textheight}{\includegraphics{two_vs_one_core-new.pdf}}
+    \centering\resizebox{!}{0.7\textheight}{\includegraphics{two_vs_one_core-new.pdf}}
   \end{frame}
 
-  \begin{frame}{Busy poll() vs run-to-completion, results\footnotemark[1]}
-    \centering\resizebox{!}{.85\textheight}{\includegraphics{results_poll.pdf}}
-      \footnotetext[1]{
-      Results have bee estimated based on internal Intel analysis and
-      are provided for informational purposes only. Any difference in
-      system hardware or software design or configuration may affect
-      actual performance. Software and workloads used in performance
-      tests may have been optimized for performance only on Intel
-      microprocessors. Performance tests, such as SYSmark and
-      MobileMark, are measured using specific computer systems,
-      components, software, operations and functions. Any change to
-      any of those factors may cause the results to vary. You should
-      consult other information and performance tests to assist you in
-      fully evaluating your contemplated purchases, including the
-      performance of that product when combined with other
-      products. For more information go
-      to http://www.intel.com/performance/datacenter.}
+
+  {%
+  \begin{frame}{Busy poll() vs run-to-completion, results}
+  \fontsize{3pt}{2pt}\selectfont
+    \begin{center}\resizebox{!}{.70\textheight}{\includegraphics{results_poll.pdf}}\end{center}
+  Results have bee estimated based on internal Intel analysis and are
+  provided for informational purposes only. Any difference in system
+  hardware or software design or configuration may affect actual
+  performance. Software and workloads used in performance tests may
+  have been optimized for performance only on Intel
+  microprocessors. Performance tests, such as SYSmark and MobileMark,
+  are measured using specific computer systems, components, software,
+  operations and functions. Any change to any of those factors may
+  cause the results to vary. You should consult other information and
+  performance tests to assist you in fully evaluating your
+  contemplated purchases, including the performance of that product
+  when combined with other products. For more information go to
+  http://www.intel.com/performance/datacenter.  
   \end{frame}
+  }
 
   \begin{frame}{Comparison with DPDK}
     \begin{itemize}
@@ -210,24 +259,25 @@
     \end{itemize}
   \end{frame}
 
-  \begin{frame}{Comparison with DPDK, results\footnotemark[1]}
-    \centering\resizebox{!}{.85\textheight}{\includegraphics{results_dpdk.pdf}}
-      \footnotetext[1]{
-      Results have bee estimated based on internal Intel analysis and
-      are provided for informational purposes only. Any difference in
-      system hardware or software design or configuration may affect
-      actual performance. Software and workloads used in performance
-      tests may have been optimized for performance only on Intel
-      microprocessors. Performance tests, such as SYSmark and
-      MobileMark, are measured using specific computer systems,
-      components, software, operations and functions. Any change to
-      any of those factors may cause the results to vary. You should
-      consult other information and performance tests to assist you in
-      fully evaluating your contemplated purchases, including the
-      performance of that product when combined with other
-      products. For more information go
-      to http://www.intel.com/performance/datacenter.}
+  {%
+  \begin{frame}{Comparison with DPDK, results}
+  \fontsize{3pt}{2pt}\selectfont
+    \begin{center}\resizebox{!}{.70\textheight}{\includegraphics{results_dpdk.pdf}}\end{center}
+  Results have bee estimated based on internal Intel analysis and are
+  provided for informational purposes only. Any difference in system
+  hardware or software design or configuration may affect actual
+  performance. Software and workloads used in performance tests may
+  have been optimized for performance only on Intel
+  microprocessors. Performance tests, such as SYSmark and MobileMark,
+  are measured using specific computer systems, components, software,
+  operations and functions. Any change to any of those factors may
+  cause the results to vary. You should consult other information and
+  performance tests to assist you in fully evaluating your
+  contemplated purchases, including the performance of that product
+  when combined with other products. For more information go to
+  http://www.intel.com/performance/datacenter.  
   \end{frame}
+  }
 
   \begin{frame}{Next steps}
     Upstream!
@@ -294,9 +344,17 @@
   \end{columns}
   \end{frame}
 
-  \begin{frame}[standout]
-    Questions?
+  {%
+  \setbeamertemplate{footline}{}
+  \setbeamertemplate{background canvas}{
+  \begin{tikzpicture}[remember picture,overlay]
+      \shade[left color=DarkBlue,right color=Turquoise] (current page.south west) rectangle (current page.north east);
+  \end{tikzpicture}
+  }
+
+  \begin{frame}
     \resizebox{\textwidth}{!}{\includegraphics{af_xdp_vit.pdf}}
   \end{frame}
+  }
 
 \end{document}
